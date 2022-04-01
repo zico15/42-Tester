@@ -7,7 +7,6 @@ package pkg42.util.tester;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import javafx.beans.property.SimpleStringProperty;
 
 /**
  *
@@ -17,15 +16,15 @@ public class ObjectTest implements Serializable {
     
     private static final long serialVersionUID = 1;
 
-    private final SimpleStringProperty name;
-    private final SimpleStringProperty git;
-    private final SimpleStringProperty author;
+    private String name;
+    private String git;
+    private String author;
     private final ArrayList<String> outInput;
     
     public ObjectTest(String name, String git, String author){
-        this.name = new SimpleStringProperty(name);
-        this.git = new SimpleStringProperty(git);
-        this.author = new SimpleStringProperty(author);
+        this.name = name;
+        this.git = git;
+        this.author = author;
         this.outInput = new ArrayList<>();
     }
 
@@ -33,42 +32,42 @@ public class ObjectTest implements Serializable {
      * @return the name
      */
     public String getName() {
-        return name.get();
+        return name;
     }
 
     /**
      * @param name the name to set
      */
     public void setName(String name) {
-        this.name.set(name);
+        this.name = name;
     }
 
     /**
      * @return the git
      */
     public String getGit() {
-        return git.get();
+        return git;
     }
 
     /**
      * @param git the git to set
      */
     public void setGit(String git) {
-        this.git.set(git);
+        this.git = git;
     }
 
     /**
      * @return the author
      */
     public String getAuthor() {
-        return author.get();
+        return author;
     }
 
     /**
      * @param author the author to set
      */
     public void setAuthor(String author) {
-        this.author.set(author);
+        this.author = author;
     }
 
     /**
@@ -77,4 +76,9 @@ public class ObjectTest implements Serializable {
     public ArrayList<String> getOutInput() {
         return outInput;
     } 
+    
+     @Override
+    public String toString() {
+        return "N: " + getName()+ "A: " + getAuthor() + "G: " + getGit(); //To change body of generated methods, choose Tools | Templates.
+    }
 }

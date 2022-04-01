@@ -16,10 +16,16 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
+import pkg42.util.FileBase;
+import pkg42.util.project.ObjectProject;
 import pkg42.util.project.ObjectProjectFile;
 import pkg42.util.tester.ObjectTest;
+import pkg42.view.MainViewController;
+import pkg42.view.register.tableObject.ObjectTableFile;
+import pkg42.view.register.tableObject.ObjectTableTest;
 
 /**
  * FXML Controller class
@@ -29,37 +35,38 @@ import pkg42.util.tester.ObjectTest;
 public class RegisterProjectController implements Initializable {
 
     @FXML
-    private TableView<ObjectProjectFile> table_project;    
+    private TableView<ObjectTableFile> table_project;    
     @FXML
-    private TableView<ObjectTest> table_tests;    
+    private TableView<ObjectTableTest> table_tests;    
     @FXML
     private TabPane tabView;
-    
-     final ObservableList<ObjectProjectFile> data = FXCollections.observableArrayList(
-            new ObjectProjectFile("sdf", "rthb"),
-            new ObjectProjectFile("sdf", "err"),
-            new ObjectProjectFile("dfdf", "fdf")
-        );   
-
+    @FXML
+    private TextField projectField;    
+    private ObjectProject project;    
+     private ObservableList<ObjectTableFile> files;
+     private ObservableList<ObjectTableTest> tests;
+   
     /**
      * Initializes the controller class.
      * @param url
      * @param rb
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {        
+    public void initialize(URL url, ResourceBundle rb) {
+        project = new ObjectProject(null);
+        this.files = FXCollections.observableArrayList();
+        this.tests = FXCollections.observableArrayList();
         initTableProject();
-        initTableTests();
-        saveProject();          
+        initTableTests();        
     }
     
     @FXML
     void insert(ActionEvent event) {
         Platform.runLater(() -> {
             if (tabView.getSelectionModel().getSelectedIndex() == 0)
-                data.add(new ObjectProjectFile("sd", "w"));
+                files.add(new ObjectTableFile(null,null));
             else if (tabView.getSelectionModel().getSelectedIndex() == 1)
-                table_tests.getItems().add(new ObjectTest(null, null, null));
+               tests.add(new ObjectTableTest(null,null,null));
         });           
     }
 
@@ -71,29 +78,30 @@ public class RegisterProjectController implements Initializable {
     private void initTableProject(){
         table_project.setEditable(true);
         table_project.setColumnResizePolicy( TableView.CONSTRAINED_RESIZE_POLICY );
-        TableColumn<ObjectProjectFile, String>  type = new TableColumn("type");
+        TableColumn<ObjectTableFile, String>  type = new TableColumn("type");
         type.setCellFactory(TextFieldTableCell.forTableColumn());
         type.setCellValueFactory(new PropertyValueFactory<>("type"));
-        TableColumn<ObjectProjectFile, String>  name = new TableColumn("Name");
+        TableColumn<ObjectTableFile, String>  name = new TableColumn("Name");
         name.setCellFactory(TextFieldTableCell.forTableColumn());
         name.setEditable(true);
         name.setCellValueFactory(new PropertyValueFactory<>("file"));
         type.setMaxWidth( 1f * Integer.MAX_VALUE * 15 );
         name.setMaxWidth( 1f * Integer.MAX_VALUE * 85 );
         table_project.getColumns().addAll(type, name);
+        table_project.setItems(files);
     }
     
     private void initTableTests(){
         table_tests.setEditable(true);
         table_tests.setColumnResizePolicy( TableView.CONSTRAINED_RESIZE_POLICY );
-        TableColumn<ObjectTest, String>  name = new TableColumn("name");
+        TableColumn<ObjectTableTest, String>  name = new TableColumn("name");
         name.setCellFactory(TextFieldTableCell.forTableColumn());
         name.setCellValueFactory(new PropertyValueFactory<>("name"));
-        TableColumn<ObjectTest, String>  author = new TableColumn("author");
+        TableColumn<ObjectTableTest, String>  author = new TableColumn("author");
         author.setCellFactory(TextFieldTableCell.forTableColumn());
         author.setEditable(true);
         author.setCellValueFactory(new PropertyValueFactory<>("author"));
-        TableColumn<ObjectTest, String>  git = new TableColumn("git");
+        TableColumn<ObjectTableTest, String>  git = new TableColumn("git");
         git.setCellFactory(TextFieldTableCell.forTableColumn());
         git.setEditable(true);
         git.setCellValueFactory(new PropertyValueFactory<>("git"));
@@ -101,13 +109,43 @@ public class RegisterProjectController implements Initializable {
         author.setMaxWidth( 1f * Integer.MAX_VALUE * 20 );
         git.setMaxWidth( 1f * Integer.MAX_VALUE * 65 );       
         table_tests.getColumns().addAll(name, author, git);
+        table_tests.setItems(tests);
     }
     
-    public void saveProject()
+    @FXML
+    void saveProject(ActionEvent event)
     {    
-       
-       table_project.setItems(data);
-       data.add(new ObjectProjectFile("casa", "w"));
-       
+       if (!projectField.getText().isEmpty())
+       {
+           project.setName(projectField.getText().trim().toLowerCase());
+           project.getFiles().clear();
+           project.getTests().clear();
+           files.forEach(c -> {              
+               project.getFiles().add(new ObjectProjectFile(c.getType(), c.getFile()));
+           });
+           tests.forEach(c -> {
+               project.getTests().add(new ObjectTest(c.getName(), c.getGit(), c.getAuthor()));
+           });
+           MainViewController.PROJECT.put(project.getName(), project);
+           FileBase.saveObject(MainViewController.PROJECT, "list_project.42");
+           System.out.println("saveObject: "+ "list_project.42");
+       }
+    }
+    
+    @FXML
+    void loadProject(ActionEvent event){                
+        if (!projectField.getText().isEmpty() && !MainViewController.PROJECT.containsKey(projectField.getText().trim().toLowerCase()))
+            return ;
+        System.out.println("loadProject: " + projectField.getText().trim());
+        project = MainViewController.PROJECT.get(projectField.getText().trim().toLowerCase());
+        project.setName(projectField.getText().trim());
+        files.clear();
+        tests.clear();
+        project.getFiles().forEach(c -> {
+            files.add(new ObjectTableFile(c.getType(),c.getFile()));
+        });
+        project.getTests().forEach(c -> {
+           tests.add(new ObjectTableTest(c.getName(), c.getAuthor(), c.getGit()));
+        });
     }
 }

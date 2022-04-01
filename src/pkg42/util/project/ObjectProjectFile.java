@@ -5,47 +5,56 @@
  */
 package pkg42.util.project;
 
-import javafx.beans.property.SimpleStringProperty;
+import java.io.Serializable;
 
 /**
  *
  * @author zequi
  */
-public class ObjectProjectFile {
+public class ObjectProjectFile implements Serializable{
    
-    private final SimpleStringProperty type;
-    private final SimpleStringProperty file;
+    private static final long serialVersionUID = 1;
+
+    private String type;
+    private String file;
  
     public ObjectProjectFile(String type, String file) {
-        this.type = new SimpleStringProperty(type);
-        this.file = new SimpleStringProperty(file);
+        this.type = type;
+        this.file = file;
     }
 
     /**
      * @return the type
      */
     public String getType() {
-        return type.get();
+        return type;
     }
 
     /**
      * @return the file
      */
     public String getFile() {
-        return file.get();
+        return file;
     }
 
     /**
      * @param type the type to set
      */
     public void setType(String type) {
-        this.type.set(type);
+        this.type = type;
     }
 
     /**
      * @param file the file to set
      */
     public void setFile(String file) {
-        this.file.set(file);
+        this.file = file;
     }
+
+    @Override
+    public String toString() {
+        return "T: " + getType() + "F: " + getFile(); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
 }

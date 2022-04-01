@@ -7,7 +7,9 @@ package pkg42.view;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,6 +17,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import pkg42.util.FileBase;
+import pkg42.util.project.ObjectProject;
 import pkg42.util.tester.TesterBase;
 
 /**
@@ -26,6 +30,7 @@ public class MainViewController implements Initializable {
 
      @FXML
     private AnchorPane view;
+    public static HashMap<String, ObjectProject> PROJECT;
 
     /**
      * Initializes the controller class.
@@ -34,8 +39,14 @@ public class MainViewController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-         setPane("tester/Tester.fxml");
-    }    
+        
+        PROJECT = (HashMap<String, ObjectProject>) FileBase.readObject("list_project.42");
+        if (PROJECT == null)
+            PROJECT = new HashMap<>();
+        else
+            System.out.println("readObject: list_project.42 (OK)");
+        setPane("tester/Tester.fxml");
+     }    
     
 //    FXMLLoader loader = new FXMLLoader(
 //    getClass().getResource(this.initialView.getPath());
@@ -57,7 +68,9 @@ public class MainViewController implements Initializable {
 }
     @FXML
     void teste(ActionEvent event) {
-           System.out.println("CMD: \n" + Arrays.toString(TesterBase.execTerminal("cmd /C dir" ).toArray()));
+         PROJECT.values().forEach(p -> {
+             System.out.println("P: " + p.getName() + " Flies: "+ Arrays.toString(p.getFiles().toArray()));
+         });
     }
     
     @FXML
@@ -68,7 +81,8 @@ public class MainViewController implements Initializable {
     @FXML
     void registerProject(ActionEvent event) {
         setPane("register/RegisterProject.fxml");         
-    }
+    } 
+  
     
     
 }

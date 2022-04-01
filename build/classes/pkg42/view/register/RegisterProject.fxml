@@ -13,7 +13,7 @@
     </stylesheets>
    <children>
       <Label layoutX="20.0" layoutY="19.0" text="Project:" AnchorPane.leftAnchor="20.0" />
-      <TextField layoutX="85.0" layoutY="14.0" prefHeight="31.0" prefWidth="344.0" AnchorPane.leftAnchor="85.0" AnchorPane.topAnchor="14.0" />
+      <TextField fx:id="projectField" layoutX="85.0" layoutY="14.0" onAction="#loadProject" prefHeight="31.0" prefWidth="344.0" AnchorPane.leftAnchor="85.0" AnchorPane.topAnchor="14.0" />
       <TabPane fx:id="tabView" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
         <tabs>
           <Tab text="Project Files">
@@ -46,6 +46,6 @@
       </TabPane>
       <Button layoutX="20.0" layoutY="59.0" mnemonicParsing="false" onAction="#insert" prefHeight="31.0" prefWidth="130.0" text="insert" AnchorPane.leftAnchor="20.0" />
       <Button layoutX="159.0" layoutY="59.0" mnemonicParsing="false" onAction="#remove" prefHeight="31.0" prefWidth="130.0" text="remove" AnchorPane.leftAnchor="160.0" />
-      <Button layoutX="300.0" layoutY="59.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="130.0" text="save" AnchorPane.leftAnchor="300.0" />
+      <Button layoutX="300.0" layoutY="59.0" mnemonicParsing="false" onAction="#saveProject" prefHeight="31.0" prefWidth="130.0" text="save" AnchorPane.leftAnchor="300.0" />
    </children>
 </AnchorPane>

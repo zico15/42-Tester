@@ -38,11 +38,13 @@ public class FileBase {
         ObjectOutputStream obj;
         try {
             file = new File(path);
+            if (!file.exists())
+                file.createNewFile();
             obj = new ObjectOutputStream(new FileOutputStream(file, true));
             obj.writeObject(ob);
             obj.close();
         } catch (IOException e) {
-            System.out.println("saveObject: " + e.getLocalizedMessage());
+            System.out.println("(ERRO) SaveObject: " + e.getLocalizedMessage());
         }
     }
 
@@ -57,7 +59,7 @@ public class FileBase {
             file.close();
             obj.close();
         } catch (IOException | ClassNotFoundException e) {
-            System.out.println("readObject: " + e.getLocalizedMessage());
+            System.out.println("(ERRO) ReadObject: " + e.getLocalizedMessage());
         } 
         return ob;
     }

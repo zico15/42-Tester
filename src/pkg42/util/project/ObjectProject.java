@@ -17,13 +17,15 @@ public class ObjectProject implements Serializable {
     
     private static final long serialVersionUID = 1;
     
-    public String name;
+    private String name;
     private ArrayList<ObjectProjectFile> files;
      private ArrayList<ObjectTest> tests;
      
     public ObjectProject(String name)
     {
         this.name = name;
+        this.files = new ArrayList<>();//FXCollections.observableArrayList();
+        this.tests = new ArrayList<>();//FXCollections.observableArrayList(); 
     }
 
     /**
@@ -52,6 +54,20 @@ public class ObjectProject implements Serializable {
      */
     public void setTests(ArrayList<ObjectTest> tests) {
         this.tests = tests;
+    }
+
+    /**
+     * @return the name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * @param name the name to set
+     */
+    public void setName(String name) {
+        this.name = name;
     }
     
 }

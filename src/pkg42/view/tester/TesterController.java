@@ -6,19 +6,24 @@
 package pkg42.view.tester;
 
 import java.io.File;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.net.URL;
-import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.scene.input.DragEvent;
 import javafx.scene.input.TransferMode;
 import pkg42.util.FileBase;
-import pkg42.util.tester.TesterBase;
+import pkg42.util.project.ObjectProject;
+import pkg42.util.system.MensagemBox;
+import pkg42.view.MainViewController;
 
 /**
  * FXML Controller class
@@ -29,6 +34,8 @@ public class TesterController implements Initializable {
 
     @FXML
     private TreeView<String> treeViewProjct;
+    private int i;
+    private  ObjectProject projectSelect;
  
     /**
      * Initializes the controller class.
@@ -52,15 +59,56 @@ public class TesterController implements Initializable {
     
        @FXML
     void dragDropped(DragEvent e) {
+        projectSelect = null;
         List<File> files = e.getDragboard().getFiles();
         if (files.size() > 0)
         {
-               TreeItem<String> item = new TreeItem<> (files.get(0).getName());
-               FileBase.getFilesProject(files.get(0), item);
-               treeViewProjct.setRoot(item);
+            TreeItem<String> item = new TreeItem<> (files.get(0).getName());
+            FileBase.getFilesProject(files.get(0), item);
+            MainViewController.PROJECT.values().forEach(p -> {
+                if (checkFilesProject(files.get(0), p) > 0) 
+                {
+                    projectSelect = p;
+                    System.out.println("P: " + p.getName());   
+                }
+                               
+            });
+            treeViewProjct.setRoot(item);
+            if (projectSelect !=  null)
+                MensagemBox.showAlertOption("Project: " + projectSelect.getName());
+            else
+                MensagemBox.showAlertErr("Project not found!");
         }
         else
-            treeViewProjct.setRoot(null);
-      
+            treeViewProjct.setRoot(null);      
     }
+    
+    public int checkFilesProject(File file, ObjectProject p)
+    {
+        for(File f : file.listFiles()){
+                
+            if(f != null && f.exists())
+            {
+                if (f.isDirectory())
+                {
+                    i += checkFilesProject(f, p);
+                }
+                  
+                else if (f.isFile())
+                {
+                    p.getFiles().forEach(fi -> {
+                        if (fi.getType().equals("FILE") && fi.getFile().equals(f.getName()))
+                        {
+                            System.out.println("F: " + f.getName() + "fi: " + fi.getFile());
+                            i++;
+                        }
+                    });
+                }
+
+            }
+        }
+        return (i);
+    }
+    
+    
 }
