@@ -5,13 +5,19 @@
  */
 package pkg42.util;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import static java.lang.Compiler.command;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.scene.control.TreeItem;
+import pkg42.util.project.ObjectProject;
 
 /**
  *
@@ -47,6 +53,19 @@ public class FileBase {
             System.out.println("(ERRO) SaveObject: " + e.getLocalizedMessage());
         }
     }
+    
+    public static BufferedReader execuTerminal(String command){
+    
+        Process proc;
+        BufferedReader reader = null;
+        try {
+            proc = Runtime.getRuntime().exec(command);
+            reader = new BufferedReader(new InputStreamReader(proc.getInputStream()));
+        } catch (IOException ex) {
+            Logger.getLogger(FileBase.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return (reader);
+    }
 
     public static Object readObject(String path) {
         FileInputStream file;
@@ -62,6 +81,32 @@ public class FileBase {
             System.out.println("(ERRO) ReadObject: " + e.getLocalizedMessage());
         } 
         return ob;
+    }
+    
+    public static int checkFilesProject(File file, ObjectProject p)
+    {
+        int i =  0;
+        for(File f : file.listFiles()){
+                
+            if(f != null && f.exists())
+            {
+                if (f.isDirectory())
+                {
+                    i += checkFilesProject(f, p);
+                }
+                  
+                else if (f.isFile())
+                {
+                    for(int a = 0; a < p.getFiles().size(); a++)
+                    {
+                        if (p.getFiles().get(a).getType().equals("FILE") && p.getFiles().get(a).getFile().equals(f.getName()))
+                            i++;
+                    }
+                }
+
+            }
+        }
+        return (i);
     }
 
 }

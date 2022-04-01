@@ -19,7 +19,7 @@ public class ObjectProject implements Serializable {
     
     private String name;
     private ArrayList<ObjectProjectFile> files;
-     private ArrayList<ObjectTest> tests;
+    private ArrayList<ObjectTest> tests;
      
     public ObjectProject(String name)
     {

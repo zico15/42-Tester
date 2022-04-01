@@ -47,7 +47,11 @@ public class TesterController implements Initializable {
     
     }    
     
-    
+    private void download(){
+        projectSelect.getTests().forEach(g -> {        
+            FileBase.execuTerminal("git clone " + g.getGit());
+        });
+    }
     
     @FXML
     void dragOver(DragEvent e) {
@@ -66,16 +70,15 @@ public class TesterController implements Initializable {
             TreeItem<String> item = new TreeItem<> (files.get(0).getName());
             FileBase.getFilesProject(files.get(0), item);
             MainViewController.PROJECT.values().forEach(p -> {
-                if (checkFilesProject(files.get(0), p) > 0) 
+                if (FileBase.checkFilesProject(files.get(0), p) > 0) 
                 {
                     projectSelect = p;
                     System.out.println("P: " + p.getName());   
-                }
-                               
+                }                               
             });
             treeViewProjct.setRoot(item);
-            if (projectSelect !=  null)
-                MensagemBox.showAlertOption("Project: " + projectSelect.getName());
+            if (projectSelect !=  null && MensagemBox.showAlertOption("Project: " + projectSelect.getName(), "Start Download?"))
+                download();
             else
                 MensagemBox.showAlertErr("Project not found!");
         }
@@ -83,32 +86,7 @@ public class TesterController implements Initializable {
             treeViewProjct.setRoot(null);      
     }
     
-    public int checkFilesProject(File file, ObjectProject p)
-    {
-        for(File f : file.listFiles()){
-                
-            if(f != null && f.exists())
-            {
-                if (f.isDirectory())
-                {
-                    i += checkFilesProject(f, p);
-                }
-                  
-                else if (f.isFile())
-                {
-                    p.getFiles().forEach(fi -> {
-                        if (fi.getType().equals("FILE") && fi.getFile().equals(f.getName()))
-                        {
-                            System.out.println("F: " + f.getName() + "fi: " + fi.getFile());
-                            i++;
-                        }
-                    });
-                }
-
-            }
-        }
-        return (i);
-    }
+ 
     
     
 }

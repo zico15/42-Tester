@@ -7,6 +7,11 @@ package pkg42.util.system;
 
 import javafx.application.Platform;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.DialogPane;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.HBox;
 
 /**
  *
@@ -23,13 +28,27 @@ public class MensagemBox {
         });
     }
     
-     public static void showAlertOption(String header) {
-        Platform.runLater(() -> {
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+     public static boolean showAlertOption(String header, String text) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        Platform.runLater(() -> {            
             alert.setHeaderText(header);
-            //alert.getDialogPane().setExpandableContent(new ScrollPane(new TextArea(sw.toString())));
+            alert.setContentText(text);
+              //alert.getDialogPane().setExpandableContent(new ScrollPane(new TextArea(sw.toString())));
             alert.showAndWait();
+            System.out.println("Resul: "+ alert.getResult().getText());
         });
+        return (("ok".equals(alert.getResult().getText())));
+    }
+     
+    public static DialogPane MyDialog() {
+        DialogPane d = new DialogPane();
+          
+        HBox hBox = new HBox(6);
+        hBox.getChildren().addAll(new TextField(), new Button("Button"));
+        d.setContent(hBox);
+        d.setStyle("-fx-padding: 1; -fx-background-color: #1d1d1d;-fx-border-color: #e2e2e2;-fx-border-width: 2;");
+        d.getButtonTypes().add(ButtonType.OK);
+        return (d);
     }
     
 }
