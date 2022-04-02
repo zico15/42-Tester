@@ -12,6 +12,11 @@
         <URL value="@../tester/tester.css" />
     </stylesheets>
    <children>
-      <TreeView fx:id="treeViewProjct" layoutX="-4.0" layoutY="30.0" prefHeight="369.0" prefWidth="199.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <SplitPane dividerPositions="0.5" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <TreeView fx:id="treeViewProjct" maxWidth="-Infinity" minWidth="200.0" prefHeight="200.0" prefWidth="100.0" />
+            <TextArea fx:id="textArea" maxWidth="1.7976931348623157E308" />
+         </items>
+      </SplitPane>
    </children>
 </AnchorPane>

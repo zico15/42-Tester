@@ -61,8 +61,8 @@ public class FileBase {
         try {
             proc = Runtime.getRuntime().exec(command);
             reader = new BufferedReader(new InputStreamReader(proc.getInputStream()));
-        } catch (IOException ex) {
-            Logger.getLogger(FileBase.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException e) {
+             System.out.println("(ERRO) execuTerminal: " + e.getLocalizedMessage());
         }
         return (reader);
     }

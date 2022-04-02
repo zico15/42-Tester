@@ -30,13 +30,13 @@ public class MensagemBox {
     
      public static boolean showAlertOption(String header, String text) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        Platform.runLater(() -> {            
+       // Platform.runLater(() -> {            
             alert.setHeaderText(header);
             alert.setContentText(text);
               //alert.getDialogPane().setExpandableContent(new ScrollPane(new TextArea(sw.toString())));
             alert.showAndWait();
-            System.out.println("Resul: "+ alert.getResult().getText());
-        });
+            //System.out.println("Resul: "+ alert.getResult().getText());
+       // });
         return (("ok".equals(alert.getResult().getText())));
     }
      
