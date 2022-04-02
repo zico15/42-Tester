@@ -21,6 +21,9 @@ public class ObjectProject implements Serializable {
     private ArrayList<ObjectProjectFile> files;
     private ArrayList<ObjectTest> tests;
      
+    /**
+     * Constructor (ObjectProject Class)
+    */
     public ObjectProject(String name)
     {
         this.name = name;

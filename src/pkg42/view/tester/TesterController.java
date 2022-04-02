@@ -5,15 +5,12 @@
  */
 package pkg42.view.tester;
 
-import static java.awt.SystemColor.text;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextArea;
@@ -35,7 +32,6 @@ public class TesterController implements Initializable {
 
     @FXML
     private TreeView<String> treeViewProjct;
-    private int i;
     private  ObjectProject projectSelect;
     @FXML
     private TextArea textArea;
@@ -53,7 +49,6 @@ public class TesterController implements Initializable {
     private void download(){
          System.out.println("Download");
         projectSelect.getTests().forEach(g -> {       
-            
             System.out.println("Start Download");
             try {
                 String line = "";
@@ -67,7 +62,9 @@ public class TesterController implements Initializable {
          
         });
     }
-    
+    /**
+     * Event emited by "AnchorPane" when the user drag a file
+    */
     @FXML
     void dragOver(DragEvent e) {
         if (e.getDragboard().hasFiles())
@@ -75,16 +72,21 @@ public class TesterController implements Initializable {
             e.acceptTransferModes(TransferMode.LINK);
         }
     }
-    
-       @FXML
+    /**
+     *  Function when the user drop the file in the treeView 
+    */
+    @FXML
     void dragDropped(DragEvent e) {
         projectSelect = null;
         List<File> files = e.getDragboard().getFiles();
+        // If folder droped has more than one file lets create a treeItem
         if (files.size() > 0)
         {
             TreeItem<String> item = new TreeItem<> (files.get(0).getName());
             FileBase.getFilesProject(files.get(0), item);
             MainViewController.PROJECT.values().forEach(p -> {
+                System.out.println("Logo abaixo");
+                System.out.println(FileBase.checkFilesProject(files.get(0), p));
                 if (FileBase.checkFilesProject(files.get(0), p) > 0) 
                 {
                     projectSelect = p;
@@ -94,11 +96,14 @@ public class TesterController implements Initializable {
             treeViewProjct.setRoot(item);
             if (projectSelect !=  null && MensagemBox.showAlertOption("Project: " + projectSelect.getName(), "Start Download?"))
                 download();
-            else
+            else {
                 MensagemBox.showAlertErr("Project not found!");
+                // Case project not found reset the treeView
+                treeViewProjct.setRoot(null);
+            }
         }
-        else
-            treeViewProjct.setRoot(null);      
+        // If no files was found lets reset treeView
+        else treeViewProjct.setRoot(null);
     }
     
  
