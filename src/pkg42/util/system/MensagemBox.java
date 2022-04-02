@@ -37,7 +37,7 @@ public class MensagemBox {
             alert.showAndWait();
             //System.out.println("Resul: "+ alert.getResult().getText());
        // });
-        return (("ok".equals(alert.getResult().getText())));
+        return (true);
     }
      
     public static DialogPane MyDialog() {
