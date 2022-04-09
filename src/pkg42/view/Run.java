@@ -30,7 +30,7 @@ public class Run extends Application {
             Logger.getLogger(Run.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        Scene scene = new Scene(root, 800, 600);
+        Scene scene = new Scene(root, 350, 350);
         primaryStage.setTitle("42 Tester - C");
         primaryStage.setScene(scene);
         primaryStage.show();

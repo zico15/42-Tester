@@ -7,7 +7,6 @@ package pkg42.view;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.ResourceBundle;
@@ -19,7 +18,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import pkg42.util.FileBase;
 import pkg42.util.project.ObjectProject;
-import pkg42.util.tester.TesterBase;
 
 /**
  * FXML Controller class
@@ -45,7 +43,7 @@ public class MainViewController implements Initializable {
             PROJECT = new HashMap<>();
         else
             System.out.println("readObject: list_project.42 (OK)");
-        setPane("tester/Tester.fxml");
+        // setPane("tester/Tester.fxml");
      }    
     
 //    FXMLLoader loader = new FXMLLoader(

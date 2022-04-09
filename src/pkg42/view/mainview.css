@@ -3,5 +3,37 @@
  */
 
 .mainFxmlClass {
-  
+    /* -fx-margin-top: 30%; */
+}
+
+.imageUpload {
+    -fx-background-color: aqua;
+    -fx-border-color: black;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-background-insets: 5;
+    -fx-text-fill: white;
+    -fx-font-size: 12;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+    -fx-text-alignment: center;
+    -fx-margin-top: 30%;
+    -fx-position: relative;
+}
+.outroNome {
+    -fx-background-color: rgb(186, 186, 186);
+    -fx-border-color: black;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-background-insets: 5;
+    -fx-text-fill: white;
+    -fx-font-size: 12;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+    -fx-text-alignment: center;
+    -fx-font-size: 20;
+    -fx-text-align: center;
+    -fx-width: 50%;
 }
