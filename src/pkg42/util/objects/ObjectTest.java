@@ -34,10 +34,7 @@ public class ObjectTest implements Serializable {
         type = "NULL";
     }
     
-    public ObjectTest(JSONObject employee){
-
-        //Get employee object within list
-        JSONObject employeeObject = (JSONObject) employee.get("testers");
+    public ObjectTest(JSONObject employeeObject){
 
         //Get employee first name
         author = (String) employeeObject.get("author");
@@ -52,7 +49,7 @@ public class ObjectTest implements Serializable {
         System.out.println(cmdStart);
 
         //Get employee last name
-        qtdChecks = (int) employeeObject.get("qtdChecks");
+        qtdChecks = (int) ((long) employeeObject.get("qtdChecks"));
         System.out.println(qtdChecks);
 
         //Get employee website name

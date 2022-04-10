@@ -3,9 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pkg42.util;
-
-import java.io.*;
+package pkg42.util.system;
 
 import javafx.scene.control.TreeItem;
 import org.json.simple.JSONArray;
@@ -14,7 +12,8 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import pkg42.util.objects.ObjectProject;
 import pkg42.util.objects.ObjectTest;
-import pkg42.util.system.Data;
+
+import java.io.*;
 
 /**
  *
@@ -57,6 +56,8 @@ public class FileBase {
         Data.TESTES.clear();
         ObjectProject project;
         ObjectTest tester;
+        //Get employee object within list
+        JSONObject employeeObject;
 
         JSONParser jsonParser = new JSONParser();
 
@@ -68,19 +69,20 @@ public class FileBase {
             JSONArray employeeList = (JSONArray) obj;
             System.out.println(employeeList);
 
-           /* for (int i = 0; i < employeeList.size(); i++)
-            {
-                project = new ObjectProject((JSONObject) employeeList.get(i));
-                if (project != null)
-                    Data.PROJECTS.put(project.name, project);
-            }
-
             for (int i = 0; i < employeeList.size(); i++)
             {
-                tester = new ObjectTest((JSONObject) employeeList.get(i));
-                if (tester != null)
-                    Data.TESTES.add(tester);
-            }*/
+                employeeObject = (JSONObject) employeeList.get(i);
+               if (employeeObject.containsKey("projects")) {
+                   project = new ObjectProject((JSONObject) ((JSONObject) employeeList.get(i)).get("projects"));
+                   if (project != null)
+                       Data.PROJECTS.put(project.name, project);
+               }
+                if (employeeObject.containsKey("testers")) {
+                    tester = new ObjectTest((JSONObject) ((JSONObject) employeeList.get(i)).get("testers"));
+                    if (tester != null)
+                        Data.TESTES.add(tester);
+                }
+            }
 
         } catch (FileNotFoundException e) {
             System.out.println("(Error) FileReader: " + e.getLocalizedMessage());
@@ -94,7 +96,7 @@ public class FileBase {
     public static int checkFilesProject(File file, ObjectProject p)
     {
         int i =  0;
-       /* for(File f : file.listFiles()){
+        for(File f : file.listFiles()){
                 
             if(f != null && f.exists())
             {
@@ -105,15 +107,15 @@ public class FileBase {
                   
                 else if (f.isFile())
                 {
-                    for(int a = 0; a < p.getFiles().size(); a++)
+                    for(int a = 0; a < p.files.size(); a++)
                     {
-                        if (p.getFiles().get(a).getType().equals("FILE") && p.getFiles().get(a).getFile().equals(f.getName()))
+                        if (p.files.get(a) != null && p.files.get(a).equals(f.getName()))
                             i++;
                     }
                 }
 
             }
-        }*/
+        }
         return (i);
     }
 

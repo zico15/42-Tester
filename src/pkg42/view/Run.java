@@ -13,6 +13,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import pkg42.util.system.FileBase;
 
 /**
  *
@@ -29,7 +30,7 @@ public class Run extends Application {
         } catch (IOException ex) {
             Logger.getLogger(Run.class.getName()).log(Level.SEVERE, null, ex);
         }
-
+        FileBase.readData();
         Scene scene = new Scene(root, 800, 600);
         primaryStage.setTitle("42 Tester - C");
         primaryStage.setScene(scene);

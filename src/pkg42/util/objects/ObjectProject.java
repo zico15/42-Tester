@@ -35,10 +35,8 @@ public class ObjectProject implements Serializable {
     /**
      * Constructor (ObjectProject Class)
     */
-    public ObjectProject(JSONObject employee)
+    public ObjectProject(JSONObject employeeObject)
     {
-        //Get employee object within list
-        JSONObject employeeObject = (JSONObject) employee.get("projects");
 
         //Get employee first name
         name = (String) employeeObject.get("name");

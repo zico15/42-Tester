@@ -1,16 +1,9 @@
 package pkg42.util.project;
 
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.scene.input.DragEvent;
-import pkg42.util.FileBase;
 import pkg42.util.objects.ObjectProject;
-import pkg42.util.system.MensagemBox;
-import pkg42.view.MainViewController;
-
-import java.io.File;
-import java.util.List;
 
 public class ProjectController {
 
