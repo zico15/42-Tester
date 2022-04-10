@@ -1,0 +1,3 @@
+[{"projects":{"name":"teste","files":["file1.c","file2.c","file3.h"]}},
+  {"projects":{"name":"get next line","files":["get_next_line.c","get_next_line_utils.c","get_next_line.h"]}},
+  {"testers":{"cmdStart":null,"git":"git teste","author":"author tester","qtdChecks":0,"KeywordFail":null,"KeywordSuccess":null,"type":"get next line"}}]

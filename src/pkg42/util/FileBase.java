@@ -5,19 +5,16 @@
  */
 package pkg42.util;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import static java.lang.Compiler.command;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.io.*;
+
 import javafx.scene.control.TreeItem;
-import pkg42.util.project.ObjectProject;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+import pkg42.util.objects.ObjectProject;
+import pkg42.util.objects.ObjectTest;
+import pkg42.util.system.Data;
 
 /**
  *
@@ -39,54 +36,65 @@ public class FileBase {
         }
     }
 
-    public static void saveObject(Object ob, String path) {
-        File file;
-        ObjectOutputStream obj;
-        try {
-            file = new File(path);
-            if (!file.exists())
-                file.createNewFile();
-            obj = new ObjectOutputStream(new FileOutputStream(file, true));
-            obj.writeObject(ob);
-            obj.close();
+    public static void saveData() {
+        JSONArray data = new JSONArray();
+
+        Data.PROJECTS.values().forEach(p -> { data.add(p.json()); });
+        Data.TESTES.forEach(t -> { data.add(t.json()); });
+        //Write JSON file
+        try (FileWriter file = new FileWriter(Data.FILE_NAME)) {
+            //We can write any JSONArray or JSONObject instance to the file
+            file.write(data.toJSONString());
+            file.flush();
         } catch (IOException e) {
-            System.out.println("(ERRO) SaveObject: " + e.getLocalizedMessage());
+            e.printStackTrace();
         }
-    }
-    
-    public static BufferedReader execuTerminal(String command){
-    
-        Process proc;
-        BufferedReader reader = null;
-        try {
-            proc = Runtime.getRuntime().exec(command);
-            reader = new BufferedReader(new InputStreamReader(proc.getInputStream()));
-        } catch (IOException e) {
-             System.out.println("(ERRO) execuTerminal: " + e.getLocalizedMessage());
-        }
-        return (reader);
     }
 
-    public static Object readObject(String path) {
-        FileInputStream file;
-        Object ob = null;
-        ObjectInputStream obj;
-        try {
-            file = new FileInputStream(path);
-            obj = new ObjectInputStream(file);
-             ob = obj.readObject();
-            file.close();
-            obj.close();
-        } catch (IOException | ClassNotFoundException e) {
-            System.out.println("(ERRO) ReadObject: " + e.getLocalizedMessage());
-        } 
-        return ob;
+    public static void readData() {
+
+        Data.PROJECTS.clear();
+        Data.TESTES.clear();
+        ObjectProject project;
+        ObjectTest tester;
+
+        JSONParser jsonParser = new JSONParser();
+
+        try (FileReader reader = new FileReader(Data.FILE_NAME))
+        {
+            //Read JSON file
+            Object obj = jsonParser.parse(reader);
+
+            JSONArray employeeList = (JSONArray) obj;
+            System.out.println(employeeList);
+
+           /* for (int i = 0; i < employeeList.size(); i++)
+            {
+                project = new ObjectProject((JSONObject) employeeList.get(i));
+                if (project != null)
+                    Data.PROJECTS.put(project.name, project);
+            }
+
+            for (int i = 0; i < employeeList.size(); i++)
+            {
+                tester = new ObjectTest((JSONObject) employeeList.get(i));
+                if (tester != null)
+                    Data.TESTES.add(tester);
+            }*/
+
+        } catch (FileNotFoundException e) {
+            System.out.println("(Error) FileReader: " + e.getLocalizedMessage());
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
     
     public static int checkFilesProject(File file, ObjectProject p)
     {
         int i =  0;
-        for(File f : file.listFiles()){
+       /* for(File f : file.listFiles()){
                 
             if(f != null && f.exists())
             {
@@ -105,7 +113,7 @@ public class FileBase {
                 }
 
             }
-        }
+        }*/
         return (i);
     }
 
