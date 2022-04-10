@@ -7,14 +7,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08a65e7a-b6a6-49ab-b4a9-de09364110c6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pkg42/util/objects/ObjectCheck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/42-Tester.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/42-Tester.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/json_simple_1_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/json_simple_1_1_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/org_eclipse_jgit_6_1_0_202203080745_r.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/view/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/view/MainView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/view/MainViewController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/view/Run.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/view/mainview.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/view/mainview.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pkg42/view/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pkg42/view/MainViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/util/objects/ObjectProject.class" beforeDir="false" afterPath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/util/objects/ObjectProject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/util/objects/ObjectTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/util/objects/ObjectTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/util/system/Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/util/system/Data.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/util/system/FileBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/util/system/FileBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/util/system/Terminal$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/util/system/Terminal$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/util/system/Terminal.class" beforeDir="false" afterPath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/util/system/Terminal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/util/teste.class" beforeDir="false" afterPath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/util/teste.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pkg42/util/objects/ObjectProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pkg42/util/objects/ObjectProject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pkg42/util/objects/ObjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pkg42/util/objects/ObjectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pkg42/util/system/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pkg42/util/system/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pkg42/util/system/FileBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pkg42/util/system/FileBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pkg42/util/system/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pkg42/util/system/Terminal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pkg42/util/teste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pkg42/util/teste.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,13 +47,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="Makefile" value="2" />
           <entry key="class" value="1" />
           <entry key="css" value="1" />
           <entry key="fxml" value="1" />
-          <entry key="java" value="25" />
-          <entry key="json" value="1" />
+          <entry key="java" value="34" />
+          <entry key="json" value="6" />
           <entry key="md" value="1" />
-          <entry key="mf" value="1" />
+          <entry key="mf" value="2" />
           <entry key="properties" value="1" />
           <entry key="xml" value="5" />
         </counts>
@@ -50,9 +63,10 @@
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="CSS" value="1" />
-          <entry key="JAVA" value="25" />
-          <entry key="JSON" value="1" />
-          <entry key="Manifest" value="1" />
+          <entry key="JAVA" value="34" />
+          <entry key="JSON" value="6" />
+          <entry key="Makefile" value="2" />
+          <entry key="Manifest" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="1" />
           <entry key="XML" value="6" />
@@ -61,16 +75,16 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="27" />
-          <entry key="java" value="1617" />
-          <entry key="json" value="4" />
+          <entry key="java" value="2749" />
+          <entry key="json" value="103" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="27" />
-          <entry key="JAVA" value="1617" />
-          <entry key="JSON" value="4" />
+          <entry key="JAVA" value="2749" />
+          <entry key="JSON" value="103" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -79,10 +93,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.ideaLibSources/json-simple-1.1.1-sources.jar!/org/json/simple/parser/JSONParser.java">
+        <entry file="file://$PROJECT_DIR$/src/pkg42/util/teste.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="62" column="16" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
+            <state relative-caret-position="240">
+              <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Makefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="55" lean-forward="true" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -92,31 +118,36 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pkg42/view/Run.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pkg42/view/MainViewController.java">
+        <entry file="file://$PROJECT_DIR$/src/pkg42/util/system/Terminal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+            <state relative-caret-position="195">
+              <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#editMake#0;class#Terminal#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/io/Writer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="339">
+              <caret line="156" selection-start-line="156" selection-end-line="156" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pkg42/util/objects/ObjectProject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="25" selection-start-line="25" selection-end-line="60" selection-end-column="5" />
+              <folding>
+                <element signature="e#1366#1367#0" expanded="true" />
+                <element signature="e#1405#1406#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -125,10 +156,46 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pkg42/util/system/FileBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="287">
+              <caret line="72" selection-start-line="72" selection-end-line="72" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pkg42/util/objects/ObjectTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#722#723#0" expanded="true" />
+                <element signature="e#751#752#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data2.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pkg42/util/objects/ObjectCheck.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+              <folding>
+                <element signature="e#154#155#0" expanded="true" />
+                <element signature="e#218#219#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -155,18 +222,20 @@
         <option value="$PROJECT_DIR$/src/pkg42/view/tester/tester.css" />
         <option value="$PROJECT_DIR$/.idea/libraries/json_simple_1_1_1.xml" />
         <option value="$PROJECT_DIR$/src/pkg42/util/tester/ObjectTest.java" />
-        <option value="$PROJECT_DIR$/src/pkg42/util/system/Data.java" />
         <option value="$PROJECT_DIR$/src/pkg42/util/project/ProjectController.java" />
         <option value="$PROJECT_DIR$/src/pkg42/util/FileBase.java" />
         <option value="$PROJECT_DIR$/src/pkg42/util/JsonEncodeDemo.java" />
         <option value="$PROJECT_DIR$/src/pkg42/view/Run.java" />
-        <option value="$PROJECT_DIR$/src/pkg42/util/objects/ObjectProject.java" />
-        <option value="$PROJECT_DIR$/data.json" />
-        <option value="$PROJECT_DIR$/src/pkg42/util/objects/ObjectTest.java" />
-        <option value="$PROJECT_DIR$/src/pkg42/util/system/FileBase.java" />
-        <option value="$PROJECT_DIR$/src/pkg42/util/system/Terminal.java" />
-        <option value="$PROJECT_DIR$/src/pkg42/util/teste.java" />
         <option value="$PROJECT_DIR$/src/pkg42/view/MainViewController.java" />
+        <option value="$PROJECT_DIR$/src/pkg42/util/objects/ObjectCheck.java" />
+        <option value="$PROJECT_DIR$/src/pkg42/util/system/Data.java" />
+        <option value="$PROJECT_DIR$/src/pkg42/util/objects/ObjectProject.java" />
+        <option value="$PROJECT_DIR$/src/pkg42/util/system/FileBase.java" />
+        <option value="$PROJECT_DIR$/src/pkg42/util/objects/ObjectTest.java" />
+        <option value="$PROJECT_DIR$/src/pkg42/util/teste.java" />
+        <option value="$PROJECT_DIR$/data.json" />
+        <option value="$PROJECT_DIR$/Makefile" />
+        <option value="$PROJECT_DIR$/src/pkg42/util/system/Terminal.java" />
       </list>
     </option>
   </component>
@@ -177,6 +246,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="74" />
     <option name="y" value="23" />
     <option name="width" value="2560" />
     <option name="height" value="1326" />
@@ -196,24 +266,6 @@
               <item name="42-Tester" type="b2602c69:ProjectViewProjectNode" />
               <item name="42-Tester" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="42-Tester" type="b2602c69:ProjectViewProjectNode" />
-              <item name="42-Tester" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="42-Tester" type="b2602c69:ProjectViewProjectNode" />
-              <item name="42-Tester" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pkg42" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="42-Tester" type="b2602c69:ProjectViewProjectNode" />
-              <item name="42-Tester" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pkg42" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -223,7 +275,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1649613236319" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1649624989178" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -246,7 +298,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Run">
+  <component name="RunManager" selected="Application.teste">
     <configuration name="JsonEncodeDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pkg42.util.JsonEncodeDemo" />
       <module name="42-Tester" />
@@ -293,8 +345,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Run" />
         <item itemvalue="Application.teste" />
+        <item itemvalue="Application.Run" />
         <item itemvalue="Application.JsonEncodeDemo" />
       </list>
     </recent_temporary>
@@ -313,7 +365,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2560" height="1326" extended-state="6" />
+    <frame x="483" y="171" width="2560" height="1326" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25377283" />
@@ -325,15 +377,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49841145" weight="0.3298217" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4980143" visible="true" weight="0.26256078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50357425" side_tool="true" visible="true" weight="0.3298217" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5019857" side_tool="true" weight="0.3298217" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49642575" visible="true" weight="0.3298217" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49642575" weight="0.3298217" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24980143" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -438,51 +490,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pkg42/util/JsonEncodeDemo.java" />
-    <entry file="file://$PROJECT_DIR$/data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="87" selection-start-line="2" selection-start-column="87" selection-end-line="2" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pkg42/util/project/ProjectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pkg42/util/objects/ObjectProject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pkg42/util/system/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pkg42/util/objects/ObjectTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
-          <caret line="73" column="26" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
-          <folding>
-            <element signature="e#722#723#0" expanded="true" />
-            <element signature="e#751#752#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -504,32 +511,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pkg42/util/system/Terminal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-119" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manifest.mf">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pkg42/view/Run.java">
+    <entry file="file://$PROJECT_DIR$/src/pkg42/view/MainViewController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        <state relative-caret-position="660">
+          <caret line="72" column="4" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pkg42/util/teste.java">
+    <entry file="file://$PROJECT_DIR$/src/pkg42/view/Run.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="46" column="43" lean-forward="true" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
+        <state relative-caret-position="240">
+          <caret line="28" column="58" lean-forward="true" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pkg42/util/system/Data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pkg42/util/objects/ObjectProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="25" selection-start-line="25" selection-end-line="60" selection-end-column="5" />
+          <folding>
+            <element signature="e#1366#1367#0" expanded="true" />
+            <element signature="e#1405#1406#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pkg42/util/project/ProjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -538,20 +566,85 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pkg42/util/system/FileBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="287">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pkg42/view/MainViewController.java">
+    <entry file="file://$PROJECT_DIR$/data.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+        <state relative-caret-position="330">
+          <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pkg42/util/teste.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pkg42/util/objects/ObjectCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#154#155#0" expanded="true" />
+            <element signature="e#218#219#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pkg42/util/objects/ObjectTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#722#723#0" expanded="true" />
+            <element signature="e#751#752#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manifest.mf">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/io/Writer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="156" selection-start-line="156" selection-end-line="156" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="55" lean-forward="true" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pkg42/util/system/Terminal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#editMake#0;class#Terminal#0" />
           </folding>
         </state>
       </provider>
@@ -621,7 +714,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>org.eclipse.jgit-6.1.0.202203080745-r</last-edited>
+          <last-edited>json-simple-1.1.1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

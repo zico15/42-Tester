@@ -10,10 +10,12 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import pkg42.util.objects.ObjectCheck;
 import pkg42.util.objects.ObjectProject;
 import pkg42.util.objects.ObjectTest;
 
 import java.io.*;
+import java.util.ArrayList;
 
 /**
  *
@@ -36,10 +38,21 @@ public class FileBase {
     }
 
     public static void saveData() {
-        JSONArray data = new JSONArray();
-
-        Data.PROJECTS.values().forEach(p -> { data.add(p.json()); });
-        Data.TESTES.forEach(t -> { data.add(t.json()); });
+        JSONObject data = new JSONObject();
+        JSONArray pro = new JSONArray();
+        JSONArray tes = new JSONArray();
+        //JSONObject pro = new JSONObject();
+        data.put("projects", pro);
+        // JSONObject tes = new JSONObject();
+        data.put("testers", tes);
+        // data.add(pro);
+        //data.add(tes);
+        Data.PROJECTS.forEach(p -> {
+            pro.add(p.json());
+        });
+        Data.TESTES.forEach(t -> {
+            tes.add(t.json());
+        });
         //Write JSON file
         try (FileWriter file = new FileWriter(Data.FILE_NAME)) {
             //We can write any JSONArray or JSONObject instance to the file
@@ -54,36 +67,21 @@ public class FileBase {
 
         Data.PROJECTS.clear();
         Data.TESTES.clear();
-        ObjectProject project;
-        ObjectTest tester;
-        //Get employee object within list
-        JSONObject employeeObject;
-
-        JSONParser jsonParser = new JSONParser();
 
         try (FileReader reader = new FileReader(Data.FILE_NAME))
         {
-            //Read JSON file
-            Object obj = jsonParser.parse(reader);
-
-            JSONArray employeeList = (JSONArray) obj;
-            System.out.println(employeeList);
-
-            for (int i = 0; i < employeeList.size(); i++)
-            {
-                employeeObject = (JSONObject) employeeList.get(i);
-               if (employeeObject.containsKey("projects")) {
-                   project = new ObjectProject((JSONObject) ((JSONObject) employeeList.get(i)).get("projects"));
-                   if (project != null)
-                       Data.PROJECTS.put(project.name, project);
-               }
-                if (employeeObject.containsKey("testers")) {
-                    tester = new ObjectTest((JSONObject) ((JSONObject) employeeList.get(i)).get("testers"));
-                    if (tester != null)
-                        Data.TESTES.add(tester);
-                }
-            }
-
+            JSONObject list = (JSONObject) new JSONParser().parse(reader);
+            //System.out.println("employeeObject: " +list);
+            JSONArray pro = (JSONArray) list.get("projects");
+            if (pro != null)
+                pro.forEach(e -> {
+                    Data.PROJECTS.add(new ObjectProject((JSONObject) e));
+                });
+            JSONArray tes = (JSONArray) list.get("testers");
+            if (tes != null)
+                tes.forEach(e -> {
+                    Data.TESTES.add(new ObjectTest((JSONObject) e));
+                });
         } catch (FileNotFoundException e) {
             System.out.println("(Error) FileReader: " + e.getLocalizedMessage());
         } catch (IOException e) {
@@ -91,6 +89,40 @@ public class FileBase {
         } catch (ParseException e) {
             e.printStackTrace();
         }
+    }
+
+    public static ArrayList<ObjectCheck> checkProject(File file) {
+        ArrayList<ObjectCheck> projects = new ArrayList<>();
+        int check;
+
+        for (int i = 0; i < Data.PROJECTS.size(); i++) {
+            check = checkFilesProject(file, Data.PROJECTS.get(i));
+            if (check > 0) {
+                projects.add(new ObjectCheck(check, Data.PROJECTS.get(i)));
+            }
+        }
+        //return (projects);
+        return (organizeCheck(projects));
+    }
+
+    private static ArrayList<ObjectCheck> organizeCheck(ArrayList<ObjectCheck> list) {
+        ArrayList<ObjectCheck> projects = new ArrayList<>();
+        int max;
+        int mix = Integer.MAX_VALUE;
+        while (projects.size() != list.size()) {
+            max = -1;
+            for (int i = 0; i < list.size(); i++) {
+                if (list.get(i).check > max && list.get(i).check < mix)
+                    max = list.get(i).check;
+            }
+            for (int i = 0; i < list.size(); i++) {
+                if (list.get(i).check == max)
+                    projects.add(list.get(i));
+            }
+            mix = max;
+        }
+        list.clear();
+        return (projects);
     }
     
     public static int checkFilesProject(File file, ObjectProject p)

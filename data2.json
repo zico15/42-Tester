@@ -1,29 +1,35 @@
-{
-  "projects": [
-    {
+[
+  {
+    "projects": {
       "name": "teste",
       "files": [
         "file1.c",
         "file2.c",
         "file3.h"
       ]
-    },
-    {
+    }
+  },
+  {
+    "projects": {
       "name": "get next teste",
       "files": [
         "get_next_line.c",
         "get_next_line_utils.c"
       ]
-    },
-    {
+    }
+  },
+  {
+    "projects": {
       "name": "get next line",
       "files": [
         "get_next_line.c",
         "get_next_line_utils.c",
         "get_next_line.h"
       ]
-    },
-    {
+    }
+  },
+  {
+    "projects": {
       "name": "get next bonus",
       "files": [
         "get_next_line.c",
@@ -34,9 +40,9 @@
         "get_next_line_bonus.h"
       ]
     }
-  ],
-  "testers": [
-    {
+  },
+  {
+    "testers": {
       "cmdStart": null,
       "git": "git teste",
       "author": "author tester",
@@ -45,5 +51,5 @@
       "KeywordSuccess": null,
       "type": "get next line"
     }
-  ]
-}
+  }
+]

@@ -4,6 +4,7 @@ import javafx.application.Platform;
 import javafx.scene.control.TextArea;
 
 import java.io.*;
+import java.util.ArrayList;
 
 
 public class Terminal {
@@ -11,26 +12,34 @@ public class Terminal {
 
     private static void editMake(File patch)
     {
+        ArrayList<String> lines = new ArrayList<>();
         try {
-            FileReader make = new FileReader(new File(patch, "MakeFile"));
-            char[] array = new char[256];
+            BufferedReader buffRead = new BufferedReader(new FileReader(new File(patch, "Makefile")));
 
-            try (FileWriter file = new FileWriter(Data.FILE_NAME)) {
-                file.write("export TERM=xterm-256color");
-                while (make.ready())
+            for (String line = buffRead.readLine(); line != null; line = buffRead.readLine()) {
+                lines.add(line);
+            }
+            try (FileWriter file = new FileWriter(new File(patch, "Makefile"))) {
+                file.write("export TERM=xterm-256color\n\n");
+                lines.forEach(s ->
                 {
-                    make.read(array);
-                    file.write(array);
-                }
+                    try {
+                        file.write(s + "\n");
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                });
                 file.flush();
+                buffRead.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-
-
+        lines.clear();
 
     }
 

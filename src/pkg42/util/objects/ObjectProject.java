@@ -40,22 +40,23 @@ public class ObjectProject implements Serializable {
 
         //Get employee first name
         name = (String) employeeObject.get("name");
-        System.out.println(name);
 
         //Get employee last name
         files = (ArrayList<String>) employeeObject.get("files");
-        System.out.println(files.toArray().toString());
 
     }
 
     public  JSONObject json()
     {
-        JSONObject project = new JSONObject();
 
         JSONObject   j = new JSONObject();
         j.put("name", name);
         j.put("files", files);
-        project.put("projects", j);
-        return (project);
+        return (j);
+    }
+
+    @Override
+    public String toString() {
+        return "name: " + name + " files: " + files;
     }
 }
