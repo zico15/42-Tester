@@ -16,8 +16,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-import pkg42.util.FileBase;
-import pkg42.util.project.ObjectProject;
 
 /**
  * FXML Controller class
@@ -28,8 +26,6 @@ public class MainViewController implements Initializable {
 
      @FXML
     private AnchorPane view;
-    public static HashMap<String, ObjectProject> PROJECT;
-
     /**
      * Initializes the controller class.
      * @param url
@@ -37,13 +33,7 @@ public class MainViewController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
-        PROJECT = (HashMap<String, ObjectProject>) FileBase.readObject("list_project.42");
-        if (PROJECT == null)
-            PROJECT = new HashMap<>();
-        else
-            System.out.println("readObject: list_project.42 (OK)");
-        // setPane("tester/Tester.fxml");
+
      }    
     
 //    FXMLLoader loader = new FXMLLoader(
