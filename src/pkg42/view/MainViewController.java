@@ -66,9 +66,7 @@ public class MainViewController implements Initializable {
 }
     @FXML
     void teste(ActionEvent event) {
-         PROJECT.values().forEach(p -> {
-             System.out.println("P: " + p.getName() + " Flies: "+ Arrays.toString(p.getFiles().toArray()));
-         });
+
     }
     
     @FXML

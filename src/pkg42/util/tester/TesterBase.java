@@ -15,8 +15,7 @@ import java.util.Scanner;
  * @author zequi
  */
 public class TesterBase {
-    
-    
+
     public static ArrayList<String> execTerminal(String cmd)
     {
         ArrayList<String> list = new ArrayList<>();
