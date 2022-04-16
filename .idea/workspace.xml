@@ -7,26 +7,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08a65e7a-b6a6-49ab-b4a9-de09364110c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pkg42/util/objects/ObjectCheck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_eclipse_jgit_6_1_0_202203080745_r.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pkg42/view/tester/cloud.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/42-Tester.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/42-Tester.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/org_eclipse_jgit_6_1_0_202203080745_r.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/util/objects/ObjectProject.class" beforeDir="false" afterPath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/util/objects/ObjectProject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/util/objects/ObjectTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/util/objects/ObjectTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data2.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/util/system/Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/util/system/Data.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/util/system/FileBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/util/system/FileBase.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/util/system/Terminal$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/util/system/Terminal$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/util/system/Terminal.class" beforeDir="false" afterPath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/util/system/Terminal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/util/teste.class" beforeDir="false" afterPath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/util/teste.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pkg42/util/objects/ObjectProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pkg42/util/objects/ObjectProject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pkg42/util/objects/ObjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pkg42/util/objects/ObjectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/view/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/view/MainView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/view/MainViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/view/MainViewController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/view/tester/Tester.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/view/tester/Tester.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/view/tester/TesterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/view/tester/TesterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/view/tester/tester.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/out/production/42-Tester/pkg42/view/tester/tester.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pkg42/util/system/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pkg42/util/system/Data.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pkg42/util/system/FileBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pkg42/util/system/FileBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pkg42/util/system/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pkg42/util/system/Terminal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pkg42/util/teste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pkg42/util/teste.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pkg42/view/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/pkg42/view/MainView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pkg42/view/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pkg42/view/MainViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pkg42/view/Run.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pkg42/view/Run.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pkg42/view/tester/Tester.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/pkg42/view/tester/Tester.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pkg42/view/tester/TesterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pkg42/view/tester/TesterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pkg42/view/tester/tester.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pkg42/view/tester/tester.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,51 +49,55 @@
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.42" value="1" />
+          <entry key="project.open.time.5" value="2" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="Makefile" value="2" />
-          <entry key="class" value="1" />
-          <entry key="css" value="1" />
-          <entry key="fxml" value="1" />
-          <entry key="java" value="34" />
-          <entry key="json" value="6" />
+          <entry key="Makefile" value="3" />
+          <entry key="class" value="2" />
+          <entry key="css" value="4" />
+          <entry key="fxml" value="3" />
+          <entry key="java" value="42" />
+          <entry key="json" value="8" />
           <entry key="md" value="1" />
-          <entry key="mf" value="2" />
-          <entry key="properties" value="1" />
-          <entry key="xml" value="5" />
+          <entry key="mf" value="3" />
+          <entry key="png" value="1" />
+          <entry key="properties" value="2" />
+          <entry key="xml" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="1" />
-          <entry key="CSS" value="1" />
-          <entry key="JAVA" value="34" />
-          <entry key="JSON" value="6" />
-          <entry key="Makefile" value="2" />
-          <entry key="Manifest" value="2" />
+          <entry key="CLASS" value="2" />
+          <entry key="CSS" value="4" />
+          <entry key="Image" value="1" />
+          <entry key="JAVA" value="42" />
+          <entry key="JSON" value="8" />
+          <entry key="Makefile" value="3" />
+          <entry key="Manifest" value="3" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Properties" value="1" />
-          <entry key="XML" value="6" />
+          <entry key="Properties" value="2" />
+          <entry key="XML" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="27" />
-          <entry key="java" value="2749" />
-          <entry key="json" value="103" />
-          <entry key="xml" value="1" />
+          <entry key="css" value="329" />
+          <entry key="java" value="4603" />
+          <entry key="json" value="110" />
+          <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="27" />
-          <entry key="JAVA" value="2749" />
-          <entry key="JSON" value="103" />
-          <entry key="XML" value="1" />
+          <entry key="CSS" value="329" />
+          <entry key="JAVA" value="4603" />
+          <entry key="JSON" value="110" />
+          <entry key="XML" value="3" />
         </counts>
       </usages-collector>
     </session>
@@ -93,62 +105,47 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pkg42/util/teste.java">
+        <entry file="file://$PROJECT_DIR$/src/pkg42/util/system/Terminal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+            <state relative-caret-position="904">
+              <caret line="80" column="57" selection-start-line="80" selection-start-column="49" selection-end-line="80" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2375#3588#0" expanded="true" />
+                <element signature="e#3587#3588#0" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Makefile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="55" lean-forward="true" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manifest.mf">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pkg42/util/system/Terminal.java">
+        <entry file="file://$PROJECT_DIR$/src/pkg42/view/Run.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+            <state relative-caret-position="405">
+              <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pkg42/view/MainViewController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#editMake#0;class#Terminal#0" />
+                <element signature="e#849#850#0" expanded="true" />
+                <element signature="e#895#896#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/io/Writer.java">
+        <entry file="file://$PROJECT_DIR$/src/pkg42/view/tester/tester.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="156" selection-start-line="156" selection-end-line="156" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pkg42/util/objects/ObjectProject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="25" selection-start-line="25" selection-end-line="60" selection-end-column="5" />
-              <folding>
-                <element signature="e#1366#1367#0" expanded="true" />
-                <element signature="e#1405#1406#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="615">
+              <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -156,8 +153,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pkg42/util/system/FileBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="72" selection-start-line="72" selection-end-line="72" />
+            <state relative-caret-position="705">
+              <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -166,39 +163,47 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pkg42/util/objects/ObjectTest.java">
+        <entry file="file://$PROJECT_DIR$/src/pkg42/view/tester/TesterController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+            <state relative-caret-position="182">
+              <caret line="61" column="46" lean-forward="true" selection-start-line="61" selection-start-column="46" selection-end-line="61" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pkg42/util/system/Data.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="36" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#722#723#0" expanded="true" />
-                <element signature="e#751#752#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data2.json">
+        <entry file="file://$PROJECT_DIR$/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+            <state relative-caret-position="975">
+              <caret line="65" selection-start-line="65" selection-end-line="65" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pkg42/util/objects/ObjectCheck.java">
+        <entry file="file://$PROJECT_DIR$/nbproject/project.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-              <folding>
-                <element signature="e#154#155#0" expanded="true" />
-                <element signature="e#218#219#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="375">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build/built-jar.properties">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -218,24 +223,26 @@
       <list>
         <option value="$PROJECT_DIR$/src/pkg42/util/tester/TesterBase.java" />
         <option value="$USER_HOME$/Desktop/42-Tester/src/pkg42/util/tester/TesterController.java" />
-        <option value="$PROJECT_DIR$/src/pkg42/view/tester/TesterController.java" />
-        <option value="$PROJECT_DIR$/src/pkg42/view/tester/tester.css" />
         <option value="$PROJECT_DIR$/.idea/libraries/json_simple_1_1_1.xml" />
         <option value="$PROJECT_DIR$/src/pkg42/util/tester/ObjectTest.java" />
         <option value="$PROJECT_DIR$/src/pkg42/util/project/ProjectController.java" />
         <option value="$PROJECT_DIR$/src/pkg42/util/FileBase.java" />
         <option value="$PROJECT_DIR$/src/pkg42/util/JsonEncodeDemo.java" />
-        <option value="$PROJECT_DIR$/src/pkg42/view/Run.java" />
-        <option value="$PROJECT_DIR$/src/pkg42/view/MainViewController.java" />
         <option value="$PROJECT_DIR$/src/pkg42/util/objects/ObjectCheck.java" />
-        <option value="$PROJECT_DIR$/src/pkg42/util/system/Data.java" />
         <option value="$PROJECT_DIR$/src/pkg42/util/objects/ObjectProject.java" />
-        <option value="$PROJECT_DIR$/src/pkg42/util/system/FileBase.java" />
         <option value="$PROJECT_DIR$/src/pkg42/util/objects/ObjectTest.java" />
         <option value="$PROJECT_DIR$/src/pkg42/util/teste.java" />
-        <option value="$PROJECT_DIR$/data.json" />
         <option value="$PROJECT_DIR$/Makefile" />
+        <option value="$PROJECT_DIR$/src/pkg42/view/MainViewController.java" />
+        <option value="$PROJECT_DIR$/data.json" />
+        <option value="$PROJECT_DIR$/nbproject/project.xml" />
+        <option value="$PROJECT_DIR$/build.xml" />
+        <option value="$PROJECT_DIR$/src/pkg42/view/tester/tester.css" />
+        <option value="$PROJECT_DIR$/src/pkg42/view/tester/TesterController.java" />
         <option value="$PROJECT_DIR$/src/pkg42/util/system/Terminal.java" />
+        <option value="$PROJECT_DIR$/src/pkg42/util/system/FileBase.java" />
+        <option value="$PROJECT_DIR$/src/pkg42/util/system/Data.java" />
+        <option value="$PROJECT_DIR$/src/pkg42/view/Run.java" />
       </list>
     </option>
   </component>
@@ -246,19 +253,80 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="74" />
     <option name="y" value="23" />
     <option name="width" value="2560" />
     <option name="height" value="1326" />
   </component>
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>JavaFX</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>JavaFxRedundantPropertyValue</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="42-Tester" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="42-Tester" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="42-Tester" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="42-Tester" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="42-Tester" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="42-Tester" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="pkg42" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="42-Tester" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="42-Tester" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="pkg42" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="util" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="42-Tester" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="42-Tester" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="pkg42" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="util" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="system" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="42-Tester" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="42-Tester" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="pkg42" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="view" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -270,19 +338,19 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1649624989178" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1650146350100" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pkg42/view/tester" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -298,7 +366,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.teste">
+  <component name="RunManager" selected="Application.Run">
     <configuration name="JsonEncodeDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pkg42.util.JsonEncodeDemo" />
       <module name="42-Tester" />
@@ -345,8 +413,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.teste" />
         <item itemvalue="Application.Run" />
+        <item itemvalue="Application.teste" />
         <item itemvalue="Application.JsonEncodeDemo" />
       </list>
     </recent_temporary>
@@ -364,12 +432,21 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="483" y="171" width="2560" height="1326" extended-state="0" />
+    <frame x="0" y="23" width="2560" height="1326" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25377283" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989011" visible="true" weight="0.25972995" />
+      <window_info id="Structure" order="1" sideWeight="0.50109893" side_tool="true" weight="0.25774425" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -377,15 +454,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4980143" visible="true" weight="0.26256078" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49642575" visible="true" weight="0.26256078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5019857" side_tool="true" weight="0.3298217" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3298217" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4992057" weight="0.3298217" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50357425" side_tool="true" weight="0.26256078" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49642575" weight="0.3298217" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49563146" weight="0.3298217" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24980143" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -394,6 +471,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.32962668" />
+      <window_info anchor="right" id="make" order="8" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -410,31 +488,6 @@
           <caret line="110" column="3" selection-start-line="110" selection-start-column="3" selection-end-line="125" selection-end-column="5" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pkg42/view/tester/Tester.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pkg42/view/tester/tester.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pkg42/view/tester/TesterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/built-jar.properties">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/libraries/json_simple_1_1_1.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -511,15 +564,175 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
+    <entry file="file://$PROJECT_DIR$/src/pkg42/util/project/ProjectController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119" />
+        <state relative-caret-position="195">
+          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/io/Writer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1965">
+          <caret line="156" selection-start-line="156" selection-end-line="156" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pkg42/util/objects/ObjectProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="25" selection-start-line="25" selection-end-line="60" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pkg42/util/objects/ObjectTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/cloud.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pkg42/util/teste.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pkg42/view/MainView.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pkg42/view/tester/Tester.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="247" selection-start-line="11" selection-start-column="241" selection-end-line="11" selection-end-column="247" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data2.json" />
+    <entry file="file://$PROJECT_DIR$/src/pkg42/util/objects/ObjectCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nbproject/build-impl.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="1798" column="13" lean-forward="true" selection-start-line="1798" selection-start-column="13" selection-end-line="1798" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manifest.mf">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/ProcessBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2760">
+          <caret line="214" column="26" selection-start-line="214" selection-start-column="26" selection-end-line="214" selection-end-column="43" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pkg42/view/MainViewController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="72" column="4" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
+        <state relative-caret-position="300">
+          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#849#850#0" expanded="true" />
+            <element signature="e#895#896#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pkg42/view/tester/tester.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nbproject/project.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/built-jar.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testers/gnlTester/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-121">
+          <caret selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pkg42/util/system/Terminal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="904">
+          <caret line="80" column="57" selection-start-line="80" selection-start-column="49" selection-end-line="80" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2375#3588#0" expanded="true" />
+            <element signature="e#3587#3588#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pkg42/util/system/FileBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.jgit-6.1.0.202203080745-r.jar!/org/eclipse/jgit/storage/file/FileRepositoryBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pkg42/view/tester/TesterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="61" column="46" lean-forward="true" selection-start-line="61" selection-start-column="46" selection-end-line="61" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pkg42/util/system/Data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -528,124 +741,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pkg42/view/Run.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="28" column="58" lean-forward="true" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pkg42/util/system/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pkg42/util/objects/ObjectProject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="25" selection-start-line="25" selection-end-line="60" selection-end-column="5" />
-          <folding>
-            <element signature="e#1366#1367#0" expanded="true" />
-            <element signature="e#1405#1406#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pkg42/util/project/ProjectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pkg42/util/system/FileBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pkg42/util/teste.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pkg42/util/objects/ObjectCheck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#154#155#0" expanded="true" />
-            <element signature="e#218#219#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pkg42/util/objects/ObjectTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#722#723#0" expanded="true" />
-            <element signature="e#751#752#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manifest.mf">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/io/Writer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="156" selection-start-line="156" selection-end-line="156" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="55" lean-forward="true" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pkg42/util/system/Terminal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#editMake#0;class#Terminal#0" />
-          </folding>
+        <state relative-caret-position="405">
+          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -660,6 +757,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -714,7 +812,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>json-simple-1.1.1</last-edited>
+          <last-edited>org.eclipse.jgit-6.1.0.202203080745-r</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

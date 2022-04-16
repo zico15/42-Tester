@@ -48,6 +48,48 @@
 
     For list of available properties check the files
     nbproject/build-impl.xml and nbproject/jfx-impl.xml.
+    <repositories>
+    <repository>
+      <id>jgit-repository</id>
+      <url>https://repo.eclipse.org/content/groups/releases/</url>
+    </repository>
+  </repositories>
+
+  <!-- Core Library -->
+    <dependencies>
+        <dependency>
+            <groupId>org.eclipse.jgit</groupId>
+            <artifactId>org.eclipse.jgit</artifactId>
+            <version>6.1.0.202203080745-r</version>
+        </dependency>
+    </dependencies>
+
+    <!-- Smart HTTP Servlet -->
+    <dependencies>
+        <dependency>
+            <groupId>org.eclipse.jgit</groupId>
+            <artifactId>org.eclipse.jgit.http.server</artifactId>
+            <version>6.1.0.202203080745-r</version>
+        </dependency>
+    </dependencies>
+
+    <!-- AWT UI Helpers -->
+    <dependencies>
+        <dependency>
+            <groupId>org.eclipse.jgit</groupId>
+            <artifactId>org.eclipse.jgit.ui</artifactId>
+            <version>6.1.0.202203080745-r</version>
+        </dependency>
+    </dependencies>
+
+    <!-- JUnit Test Support -->
+    <dependencies>
+        <dependency>
+            <groupId>org.eclipse.jgit</groupId>
+            <artifactId>org.eclipse.jgit.junit</artifactId>
+            <version>6.1.0.202203080745-r</version>
+        </dependency>
+    </dependencies>
 
     -->
 </project>

@@ -20,14 +20,6 @@
       "files": [
         "get_next_line.c",
         "get_next_line_utils.c",
-        "get_next_line.h"
-      ]
-    },
-    {
-      "name": "get next bonus",
-      "files": [
-        "get_next_line.c",
-        "get_next_line_utils.c",
         "get_next_line.h",
         "get_next_line_bonus.c",
         "get_next_line_utils_bonus.c",
@@ -38,11 +30,11 @@
   "testers": [
     {
       "cmdStart": null,
-      "git": "git teste",
-      "author": "author tester",
+      "git": "https://github.com/Tripouille/gnlTester.git",
+      "author": "Tripouille",
       "qtdChecks": 15,
-      "KeywordFail": null,
-      "KeywordSuccess": null,
+      "KeywordFail": "KO",
+      "KeywordSuccess": "OK",
       "type": "get next line"
     }
   ]
