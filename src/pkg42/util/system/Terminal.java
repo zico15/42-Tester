@@ -1,6 +1,7 @@
 package pkg42.util.system;
 
 import javafx.application.Platform;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextArea;
 
 import java.io.*;
@@ -58,7 +59,7 @@ public class Terminal {
         return false;
     }
 
-    private static boolean app(InputStreamReader is, TextArea textArea)
+    private static boolean app(InputStreamReader is, ProgressBar progress, double v)
     {
         String line = null;
         try {
@@ -66,19 +67,19 @@ public class Terminal {
             Reader reader = is;
             BufferedReader buffer = new BufferedReader(reader);
             line = buffer.readLine();
-            //Platform.runLater(() -> {
-                if (textArea != null)
-                    textArea.appendText(line);
-                else
-                    System.out.println(line);
-            //});
+            Platform.runLater(() -> {
+                if (progress != null)
+                    progress.setProgress(progress.getProgress() + v);
+            });
+            System.out.println(line);
+            //
         } catch (IOException e) {
             e.printStackTrace();
         }
         return (line != null);
     }
 
-    public static void exec(File patch, TextArea textArea, String... command) {
+    public static void exec(File patch, ProgressBar progress, double v, String... command) {
         Thread a = new Thread() {
             @Override
             public void run() {
@@ -88,16 +89,17 @@ public class Terminal {
                     ProcessBuilder builder = new ProcessBuilder(command).directory(patch);
                     Process proc = builder.start();
                     InputStreamReader inputStreamReader = new InputStreamReader(proc.getInputStream());
-                    while (app(inputStreamReader, textArea)) {
+                    while (app(inputStreamReader, progress, v)) {
                         ;
                     }
                    inputStreamReader = new InputStreamReader(proc.getErrorStream());
-                    while (app(inputStreamReader, textArea)) {
+                    while (app(inputStreamReader, progress, v)) {
                         ;
                     }
                     proc.waitFor();
                     proc.destroy();
-                    System.out.println("final -> exec");
+                    progress.setProgress(1);
+                    System.out.println("end -> exec");
                 } catch (IOException e) {
                     System.out.println("ERROR -> exec: " + e.getLocalizedMessage());
                 } catch (InterruptedException e) {

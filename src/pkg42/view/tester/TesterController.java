@@ -22,6 +22,8 @@ import pkg42.util.system.Data;
 import pkg42.util.system.FileBase;
 import pkg42.util.system.MensagemBox;
 import pkg42.util.system.Terminal;
+import pkg42.view.Run;
+import pkg42.view.execute.ExecuteController;
 
 /**
  * FXML Controller class
@@ -67,35 +69,14 @@ public class TesterController implements Initializable {
                 if (checks.size() > 0) {
                     ArrayList<ObjectTest> testers = FileBase.getTesters(checks.get(0).project);
                     MensagemBox.showAlertOption(checks.get(0).project.name, "start tester (" + testers.size() + ")!");
-                    initTester(e.getDragboard().getFiles().get(0), dir, checks.get(0).project, testers);
+                    ExecuteController ex = (ExecuteController) Run.setPane("execute/ExecuteView.fxml");
+                    ex.initTester(e.getDragboard().getFiles().get(0), dir, checks.get(0).project, testers);
                 }
                 e.consume();
             }
 
     }
 
-    private void initTester(File file, File dir, ObjectProject project, ArrayList<ObjectTest> testers)
-    {
-        //create folder
-       File pro =  FileBase.createFolder(Data.DIR_PROJECT + "/Testers/"+file.getName());
 
-       if (dir.exists() && dir.isDirectory())
-       {
-
-           FileBase.copyFile(file, dir);
-           testers.forEach(t -> {
-              Terminal.exec(pro, null, "git", "clone", t.git);
-           });
-           try {
-               Thread.sleep(5 * 1000);
-               System.out.println("sleep: ok");
-               Terminal.exec(new File(pro, "gnlTester"), null, "make");
-           } catch (InterruptedException ie) {
-               Thread.currentThread().interrupt();
-           }
-
-       }
-
-    }
     
 }

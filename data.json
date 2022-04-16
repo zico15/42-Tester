@@ -32,7 +32,7 @@
       "cmdStart": null,
       "git": "https://github.com/Tripouille/gnlTester.git",
       "author": "Tripouille",
-      "qtdChecks": 15,
+      "qtdChecks": 118,
       "KeywordFail": "KO",
       "KeywordSuccess": "OK",
       "type": "get next line"

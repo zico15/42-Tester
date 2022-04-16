@@ -1,5 +1,6 @@
 package pkg42.util.system;
 
+import javafx.scene.layout.AnchorPane;
 import pkg42.util.objects.ObjectProject;
 import pkg42.util.objects.ObjectTest;
 
@@ -13,5 +14,6 @@ public class Data {
     public static String FILE_NAME = "data.json";
     public static String DIR_PROJECT = System.getProperty("user.dir");
     public static String DIR_TESTERS = System.getProperty("user.dir") + "/Testers";
+    public static AnchorPane VIEW_MAIN;
 
 }

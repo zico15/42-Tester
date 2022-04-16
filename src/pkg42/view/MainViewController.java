@@ -16,6 +16,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import pkg42.util.system.Data;
 
 /**
  * FXML Controller class
@@ -33,27 +34,12 @@ public class MainViewController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        setPane("tester/Tester.fxml");
+        Data.VIEW_MAIN = view;
+        Run.setPane("tester/Tester.fxml");
+        //Run.setPane("execute/ExecuteView.fxml");
      }    
     
-//    FXMLLoader loader = new FXMLLoader(
-//    getClass().getResource(this.initialView.getPath());
-//);
-//loader.setController(this);
-//root = loader.load();
-    private void setPane(String pane){
-        Pane root;
-        try {
-            root = FXMLLoader.load(getClass().getResource(pane)); 
-            AnchorPane.setTopAnchor(root, 0.0);
-            AnchorPane.setBottomAnchor(root, 0.0);
-            AnchorPane.setLeftAnchor(root, 0.0);
-            AnchorPane.setRightAnchor(root, 0.0);
-           view.getChildren().setAll(root);
-        } catch (IOException ex) {
-            System.out.println("loadPane: " + ex.getLocalizedMessage());
-        }
-}
+
     @FXML
     void teste(ActionEvent event) {
 
@@ -61,12 +47,12 @@ public class MainViewController implements Initializable {
     
     @FXML
     void tester(ActionEvent event) {
-        setPane("tester/Tester.fxml");      
+        Run.setPane("tester/Tester.fxml");
     }
     
     @FXML
     void registerProject(ActionEvent event) {
-        setPane("register/RegisterProject.fxml");         
+        Run.setPane("register/RegisterProject.fxml");
     } 
   
     
