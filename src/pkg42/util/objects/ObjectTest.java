@@ -18,6 +18,7 @@ public class ObjectTest implements Serializable {
     private static final long serialVersionUID = 1;
 
     public String author;
+    public String name;
     public String git;
     public String cmdStart;
     public int    qtdChecks;
@@ -35,24 +36,28 @@ public class ObjectTest implements Serializable {
     
     public ObjectTest(JSONObject employeeObject){
 
-        //Get employee first name
+        //Get employee first author
         author = (String) employeeObject.get("author");
 
-        //Get employee last name
+        //Get employee first tester
+        name = (String) employeeObject.get("name");
+
+        //Get employee last git
         git = (String) employeeObject.get("git");
 
-        //Get employee first name
+        //Get employee first cmdStart
         cmdStart = (String) employeeObject.get("cmdStart");
 
-        //Get employee last name
+        //Get employee last qtdChecks
         qtdChecks = (int) ((long) employeeObject.get("qtdChecks"));
 
-        //Get employee website name
+        //Get employee website KeywordSuccess
         KeywordSuccess = (String) employeeObject.get("KeywordSuccess");
 
+        //Get employee website KeywordFail
         KeywordFail = (String) employeeObject.get("KeywordFail");
 
-        //Get employee website name
+        //Get employee website type
         type = (String) employeeObject.get("type");
     }
 
