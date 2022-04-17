@@ -14,39 +14,6 @@
         <URL value="@mainview.css" />
     </stylesheets>
    <children>
-      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="imageUpload" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <!-- <MenuBar layoutX="4.0" layoutY="8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <menus>
-                  <Menu mnemonicParsing="false" text="File">
-                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#teste" text="Close" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="View">
-                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#tester" text="Tester" />
-                        <MenuItem mnemonicParsing="false" onAction="#registerProject" text="Register Project" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="Help">
-                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#teste" text="About" />
-                     </items>
-                  </Menu>
-               </menus>
-            </MenuBar> -->
-            <AnchorPane fx:id="view" layoutX="79.0" layoutY="75.0" prefHeight="200.0" prefWidth="200.0" styleClass="outroNome">
-               <children>
-                  <ImageView fitHeight="105.0" fitWidth="94.0" layoutX="52.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../assets/cloud.png" />
-                     </image>
-                  </ImageView>
-                  <Text layoutX="80.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ola mundo" />
-               </children>
-            </AnchorPane>
-         </children>
-      </Pane>
+      <AnchorPane fx:id="view" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
    </children>
 </AnchorPane>

@@ -15,6 +15,7 @@ import pkg42.util.objects.ObjectProject;
 import pkg42.util.objects.ObjectTest;
 
 import java.io.*;
+import java.nio.channels.FileChannel;
 import java.util.ArrayList;
 
 /**
@@ -35,6 +36,68 @@ public class FileBase {
                 item.getChildren().add(p);
             }
         }
+    }
+
+    public static void deleteFolder(File file)
+    {
+        if (file.exists()) {
+            for (File f : file.listFiles()) {
+
+                if (f != null && f.exists()) {
+                    if (f.isDirectory())
+                        deleteFolder(f);
+                    f.delete();
+                }
+            }
+        }
+    }
+
+
+    public static void copyFile(File source, File dest)
+    {
+        try {
+            File t;
+            dest = new File(dest, source.getName());
+            if (!dest.exists())
+                dest.mkdirs();
+           //System.out.println("Directory: " + dest);
+            for(File f : source.listFiles()){
+
+                t = new File(dest, f.getName());
+                if(f != null && f.exists())
+                {
+
+                    if (f.isDirectory())
+                    {
+                        System.out.println("Directory: " + t);
+                        copyFile(f, dest);
+                    }
+                    else if (f.isFile())
+                    {
+                        System.out.println("File: " + t);
+
+                            creadFile(f, t);
+
+                    }
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void creadFile(File sourceFile, File destFile) throws IOException {
+
+        if (!destFile.exists())
+            destFile.createNewFile();
+        FileChannel source = new FileInputStream(sourceFile).getChannel();;
+        FileChannel destination =  new FileOutputStream(destFile).getChannel();;
+        if (destination != null && source != null)
+            destination.transferFrom(source, 0, source.size());
+        if (source != null)
+            source.close();
+        if (destination != null)
+            destination.close();
     }
 
     public static void saveData() {
@@ -89,6 +152,15 @@ public class FileBase {
         } catch (ParseException e) {
             e.printStackTrace();
         }
+    }
+
+    public static File createFolder(String file)
+    {
+        File f = new File(file);
+        if (!f.exists())
+            f.mkdirs();
+        return (f);
+
     }
 
     public static ArrayList<ObjectCheck> checkProject(File file) {
@@ -151,4 +223,18 @@ public class FileBase {
         return (i);
     }
 
+    public static ArrayList<ObjectTest> getTesters(ObjectProject p)
+    {
+        ArrayList<ObjectTest> list = new ArrayList<>();
+
+        if (p != null)
+        {
+            Data.TESTES.forEach(t ->
+            {
+                if (t.type.equalsIgnoreCase(p.name))
+                    list.add(t);
+            });
+        }
+        return (list);
+    }
 }
