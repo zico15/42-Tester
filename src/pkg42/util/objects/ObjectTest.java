@@ -8,6 +8,7 @@ package pkg42.util.objects;
 import javafx.application.Platform;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
+import javafx.scene.control.TextArea;
 import org.json.simple.JSONObject;
 
 import java.io.Serializable;
@@ -28,11 +29,14 @@ public class ObjectTest implements Serializable {
     public String KeywordSuccess;
     public String KeywordFail;
     public String type;
+
+    // GUI
     public ProgressBar progress;
     public double v;
     public Label text_ok;
     public Label text_ko;
     public Label text_segm;
+    public TextArea textArea = new TextArea();
 
     /**
      * Constructor (ObjectTest Class)
@@ -82,6 +86,7 @@ public class ObjectTest implements Serializable {
                 text_ok.setText(String.valueOf(ok));
                 text_ko.setText(String.valueOf(ko));
                 text_segm.setText(String.valueOf(segm));
+                textArea.appendText(s + "\n");
             }
             progress.setProgress(progress.getProgress() + v);
         });

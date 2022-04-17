@@ -5,12 +5,14 @@
  */
 package pkg42.view.execute.item;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.layout.Pane;
 import pkg42.util.objects.ObjectTest;
+import pkg42.util.system.MensagemBox;
 import pkg42.util.system.Terminal;
 
 import java.io.File;
@@ -79,6 +81,9 @@ public class ItemController implements Initializable {
         }
     }
 
-
+    @FXML
+    void openConsole(ActionEvent event) {
+        MensagemBox.creadDialogConsole(tester);
+    }
     
 }

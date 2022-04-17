@@ -7,6 +7,7 @@ package pkg42.view.execute;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -20,6 +21,7 @@ import pkg42.util.objects.ObjectTest;
 import pkg42.util.system.Data;
 import pkg42.util.system.FileBase;
 import pkg42.util.system.Terminal;
+import pkg42.view.Run;
 import pkg42.view.execute.item.ItemController;
 
 import java.io.File;
@@ -126,6 +128,9 @@ public class ExecuteController implements Initializable {
         return (null);
     }
 
-
+    @FXML
+    void home(ActionEvent event) {
+        Run.setPane("tester/Tester.fxml");
+    }
     
 }
