@@ -1,6 +1,7 @@
 package pkg42.util.system;
 
 import javafx.application.Platform;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextArea;
 
 import java.io.*;
@@ -10,7 +11,7 @@ import java.util.ArrayList;
 public class Terminal {
 
 
-    private static void editMake(File patch)
+    public static void editMake(File patch)
     {
         ArrayList<String> lines = new ArrayList<>();
         try {
@@ -44,15 +45,13 @@ public class Terminal {
     }
 
     private static boolean appendText(final InputStreamReader inputStreamReader, TextArea textArea) {
-        try {
+            try {
             final char[] buf = new char[256];
             final int read = inputStreamReader.read(buf);
             if (read < 1) {
                 return false;
             }
-            Platform.runLater(() -> {
-                textArea.appendText(new String(buf));
-            });
+
             return true;
         } catch (final IOException e) {
             e.printStackTrace();
@@ -60,25 +59,52 @@ public class Terminal {
         return false;
     }
 
-    public static void exec(String command, File patch, TextArea textArea) {
+    private static boolean app(InputStreamReader is, ProgressBar progress, double v)
+    {
+        String line = null;
+        try {
+
+            Reader reader = is;
+            BufferedReader buffer = new BufferedReader(reader);
+            line = buffer.readLine();
+            Platform.runLater(() -> {
+                if (progress != null)
+                    progress.setProgress(progress.getProgress() + v);
+            });
+            System.out.println(line);
+            //
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return (line != null);
+    }
+
+    public static void exec(File patch, ProgressBar progress, double v, String... command) {
         Thread a = new Thread() {
             @Override
             public void run() {
                 try {
-                    if ("make".equalsIgnoreCase(command))
+                    if (command != null && "make".equalsIgnoreCase(command[0]))
                         editMake(patch);
                     ProcessBuilder builder = new ProcessBuilder(command).directory(patch);
                     Process proc = builder.start();
-                    final InputStreamReader inputStreamReader = new InputStreamReader(proc.getInputStream());
-                    while (appendText(inputStreamReader, textArea)) {
+                    InputStreamReader inputStreamReader = new InputStreamReader(proc.getInputStream());
+                    while (app(inputStreamReader, progress, v)) {
+                        ;
+                    }
+                   inputStreamReader = new InputStreamReader(proc.getErrorStream());
+                    while (app(inputStreamReader, progress, v)) {
                         ;
                     }
                     proc.waitFor();
                     proc.destroy();
+                    if (progress != null)
+                        progress.setProgress(1);
+                    System.out.println("end -> exec");
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    System.out.println("ERROR -> exec: " + e.getLocalizedMessage());
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
+                    System.out.println("ERROR -> exec: " + e.getLocalizedMessage());
                 }
             }
         };

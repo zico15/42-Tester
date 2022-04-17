@@ -7,6 +7,7 @@ package pkg42.util.objects;
 
 import org.json.simple.JSONObject;
 
+import java.io.File;
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -21,6 +22,12 @@ public class ObjectProject implements Serializable {
     public String name;
 
     public ArrayList<String> files;
+
+    public ArrayList<ObjectTest> testers;
+
+    public File file_origem;
+
+    public File file_tester;
 
 
 
