@@ -16,7 +16,7 @@
       ]
     },
     {
-      "name": "get next line",
+      "name": "get_next_line",
       "files": [
         "get_next_line.c",
         "get_next_line_utils.c",
@@ -30,13 +30,24 @@
   "testers": [
     {
       "cmdStart": null,
-      "git": "https://github.com/Tripouille/gnlTester.git",
+      "git": "https://github.com/Tripouille/gnlTester",
       "author": "Tripouille",
       "name": "gnlTester",
       "qtdChecks": 118,
       "KeywordFail": "KO",
       "KeywordSuccess": "OK",
-      "type": "get next line"
+      "type": "get_next_line"
+    }
+     ,
+    {
+      "cmdStart": null,
+      "git": "https://github.com/kodpe/42test-gnl-station-2022",
+      "author": "kodpe",
+      "name": "42test-gnl-station-2022",
+      "qtdChecks": 38,
+      "KeywordFail": "KO",
+      "KeywordSuccess": "OK",
+      "type": "get_next_line"
     }
   ]
 }
