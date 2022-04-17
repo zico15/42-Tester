@@ -16,4 +16,6 @@ public class Data {
     public static String DIR_TESTERS = System.getProperty("user.dir") + "/Testers";
     public static AnchorPane VIEW_MAIN;
 
+    public static ObjectProject PROJECT_SELECT;
+
 }

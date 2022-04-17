@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -36,6 +37,7 @@ public class Run extends Application {
         }
         primaryStage.setOnCloseRequest(event -> {
             FileBase.deleteFolder(new File(Data.DIR_TESTERS));
+            Platform.exit();
         });
         Scene scene = new Scene(root, 350, 350);
         primaryStage.setTitle("42 Tester - C");

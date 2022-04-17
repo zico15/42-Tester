@@ -16,11 +16,7 @@
         <URL value="@../execute/execute.css" />
     </stylesheets>
    <children>
-      <ProgressBar fx:id="progress" layoutX="29.0" layoutY="49.0" prefHeight="36.0" prefWidth="300.0" progress="0.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
-      <Label alignment="CENTER" layoutX="259.0" layoutY="22.0" text="Tester" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
+      <ListView fx:id="list_view" layoutX="63.0" layoutY="75.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <ProgressIndicator fx:id="progess" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0" />
    </children>
 </AnchorPane>

@@ -69,8 +69,12 @@ public class TesterController implements Initializable {
                 if (checks.size() > 0) {
                     ArrayList<ObjectTest> testers = FileBase.getTesters(checks.get(0).project);
                     MensagemBox.showAlertOption(checks.get(0).project.name, "start tester (" + testers.size() + ")!");
-                    ExecuteController ex = (ExecuteController) Run.setPane("execute/ExecuteView.fxml");
-                    ex.initTester(e.getDragboard().getFiles().get(0), dir, checks.get(0).project, testers);
+                    checks.get(0).project.testers = testers;
+                    checks.get(0).project.file_origem = e.getDragboard().getFiles().get(0);
+                    checks.get(0).project.file_tester = dir;
+                    Data.PROJECT_SELECT = checks.get(0).project;
+                    Run.setPane("execute/ExecuteView.fxml");
+                    //ex.initTester(), dir,);
                 }
                 e.consume();
             }

@@ -98,7 +98,8 @@ public class Terminal {
                     }
                     proc.waitFor();
                     proc.destroy();
-                    progress.setProgress(1);
+                    if (progress != null)
+                        progress.setProgress(1);
                     System.out.println("end -> exec");
                 } catch (IOException e) {
                     System.out.println("ERROR -> exec: " + e.getLocalizedMessage());
