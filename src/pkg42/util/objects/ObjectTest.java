@@ -5,6 +5,9 @@
  */
 package pkg42.util.objects;
 
+import javafx.application.Platform;
+import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 import org.json.simple.JSONObject;
 
 import java.io.Serializable;
@@ -25,6 +28,11 @@ public class ObjectTest implements Serializable {
     public String KeywordSuccess;
     public String KeywordFail;
     public String type;
+    public ProgressBar progress;
+    public double v;
+    public Label text_ok;
+    public Label text_ko;
+    public Label text_segm;
 
     /**
      * Constructor (ObjectTest Class)
@@ -59,6 +67,24 @@ public class ObjectTest implements Serializable {
 
         //Get employee website type
         type = (String) employeeObject.get("type");
+    }
+
+    public void updateTexts(String s) {
+        Platform.runLater(() -> {
+            if (s != null && !s.isEmpty()){
+                int ok = Integer.valueOf(text_ok.getText());
+                int ko = Integer.valueOf(text_ko.getText());
+                int segm = Integer.valueOf(text_segm.getText());
+
+                ok += s.split(KeywordSuccess).length - 1;
+                ko += s.split(KeywordFail).length - 1;
+                //System.out.println("OK: " + ok + " KO: " + ko);
+                text_ok.setText(String.valueOf(ok));
+                text_ko.setText(String.valueOf(ko));
+                text_segm.setText(String.valueOf(segm));
+            }
+            progress.setProgress(progress.getProgress() + v);
+        });
     }
 
 

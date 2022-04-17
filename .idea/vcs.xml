@@ -2,7 +2,10 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Testers/Get_next_line/clone" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Testers/Get_next_line/gnlTester" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Testers/clone" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Testers/git_next_line/42test-gnl-station-2022" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Testers/git_next_line/gnlTester" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Testers/gnlTester" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/gnlTester" vcs="Git" />

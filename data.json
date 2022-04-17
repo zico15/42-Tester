@@ -43,7 +43,7 @@
       "git": "https://github.com/kodpe/42test-gnl-station-2022",
       "author": "kodpe",
       "name": "42test-gnl-station-2022",
-      "qtdChecks": 118,
+      "qtdChecks": 38,
       "KeywordFail": "KO",
       "KeywordSuccess": "OK",
       "type": "get_next_line"

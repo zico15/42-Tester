@@ -5,7 +5,6 @@
  */
 package pkg42.view.execute;
 
-import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -13,21 +12,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
-import javafx.scene.control.ProgressBar;
 import javafx.scene.control.ProgressIndicator;
-import javafx.scene.input.DragEvent;
-import javafx.scene.input.TransferMode;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.util.Callback;
-import pkg42.util.objects.ObjectCheck;
 import pkg42.util.objects.ObjectProject;
 import pkg42.util.objects.ObjectTest;
 import pkg42.util.system.Data;
 import pkg42.util.system.FileBase;
-import pkg42.util.system.MensagemBox;
 import pkg42.util.system.Terminal;
-import pkg42.view.Run;
 import pkg42.view.execute.item.ItemController;
 
 import java.io.File;
@@ -88,22 +80,28 @@ public class ExecuteController implements Initializable {
 
                 FileBase.copyFile(file, dir);
                 testers.forEach(t -> {
-                    Terminal.exec(pro, null, 0, "git", "clone", t.git);
+                    Terminal.exec(pro, "git", "clone", t.git);
                     System.out.println("V: "+t.qtdChecks);
                     data.add(getItem("item/ItemView.fxml" ,t));
 
                 });
                 try {
-                    Thread.sleep((5) * 1000);
+                    Thread.sleep(5 * 1000);
                     System.out.println("sleep: ok");
                 } catch (InterruptedException ie) {
                     Thread.currentThread().interrupt();
                 }
-
         }
         progess.setVisible(false);
         list_view.setVisible(true);
-
+        data.forEach(e -> {
+            Thread run = new Thread() {
+                public void run() {
+                    e.initTester(pro);
+                }
+            };
+            run.start();
+        });
 
     }
 
