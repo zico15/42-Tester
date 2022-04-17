@@ -10,15 +10,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.layout.Pane;
-import pkg42.util.objects.ObjectProject;
 import pkg42.util.objects.ObjectTest;
-import pkg42.util.system.Data;
-import pkg42.util.system.FileBase;
 import pkg42.util.system.Terminal;
 
 import java.io.File;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 /**
@@ -27,8 +23,6 @@ import java.util.ResourceBundle;
  * @author zequi
  */
 public class ItemController implements Initializable {
-
-    private double v;
 
     @FXML
     private Label text_title;
@@ -65,10 +59,14 @@ public class ItemController implements Initializable {
         if (tester != null)
         {
             text_title.setText(tester.name);
-            text_ok.setText("0 / 0");
-            text_ko.setText("0 / 0");
-            text_segm.setText("0 / 0");
-            v = 1 / (double) (tester.qtdChecks);
+            text_ok.setText("0");
+            text_ko.setText("0");
+            text_segm.setText("0");
+            tester.v = 1 / (double) (tester.qtdChecks);
+            tester.progress = progress;
+            tester.text_ok = text_ok;
+            tester.text_ko = text_ko;
+            tester.text_segm = text_segm;
         }
     }
 
@@ -76,7 +74,8 @@ public class ItemController implements Initializable {
     {
         if (tester != null && project.exists()) {
             progress.setProgress(0);
-            Terminal.exec(new File(project, tester.name), progress, v, "make");
+            System.out.println("initTester: " + tester.name);
+            Terminal.exec(new File(project, tester.name), tester, "make");
         }
     }
 

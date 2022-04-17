@@ -1,8 +1,7 @@
 package pkg42.util.system;
 
-import javafx.application.Platform;
-import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextArea;
+import pkg42.util.objects.ObjectTest;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -59,7 +58,7 @@ public class Terminal {
         return false;
     }
 
-    private static boolean app(InputStreamReader is, ProgressBar progress, double v)
+    private static boolean app(InputStreamReader is, ObjectTest tester)
     {
         String line = null;
         try {
@@ -67,10 +66,10 @@ public class Terminal {
             Reader reader = is;
             BufferedReader buffer = new BufferedReader(reader);
             line = buffer.readLine();
-            Platform.runLater(() -> {
-                if (progress != null)
-                    progress.setProgress(progress.getProgress() + v);
-            });
+            //Platform.runLater(() -> {
+            if (tester != null && tester.progress != null)
+                tester.updateTexts(line);
+            //});
             System.out.println(line);
             //
         } catch (IOException e) {
@@ -79,7 +78,7 @@ public class Terminal {
         return (line != null);
     }
 
-    public static void exec(File patch, ProgressBar progress, double v, String... command) {
+    public static void exec(File patch, String... command) {
         Thread a = new Thread() {
             @Override
             public void run() {
@@ -89,17 +88,47 @@ public class Terminal {
                     ProcessBuilder builder = new ProcessBuilder(command).directory(patch);
                     Process proc = builder.start();
                     InputStreamReader inputStreamReader = new InputStreamReader(proc.getInputStream());
-                    while (app(inputStreamReader, progress, v)) {
+                    while (app(inputStreamReader, null)) {
                         ;
                     }
                    inputStreamReader = new InputStreamReader(proc.getErrorStream());
-                    while (app(inputStreamReader, progress, v)) {
+                    while (app(inputStreamReader, null)) {
                         ;
                     }
                     proc.waitFor();
                     proc.destroy();
-                    if (progress != null)
-                        progress.setProgress(1);
+                    System.out.println("end -> exec");
+                } catch (IOException e) {
+                    System.out.println("ERROR -> exec: " + e.getLocalizedMessage());
+                } catch (InterruptedException e) {
+                    System.out.println("ERROR -> exec: " + e.getLocalizedMessage());
+                }
+            }
+        };
+        a.start();
+    }
+
+    public static void exec(File patch, ObjectTest tester, String... command) {
+        Thread a = new Thread() {
+            @Override
+            public void run() {
+                try {
+                    if (command != null && "make".equalsIgnoreCase(command[0]))
+                        editMake(patch);
+                    ProcessBuilder builder = new ProcessBuilder(command).directory(patch);
+                    Process proc = builder.start();
+                    InputStreamReader inputStreamReader = new InputStreamReader(proc.getInputStream());
+                    while (app(inputStreamReader, tester)) {
+                        ;
+                    }
+                    inputStreamReader = new InputStreamReader(proc.getErrorStream());
+                    while (app(inputStreamReader, tester)) {
+                        ;
+                    }
+                    proc.waitFor();
+                    proc.destroy();
+                    if (tester != null && tester.progress != null)
+                        tester.progress.setProgress(1);
                     System.out.println("end -> exec");
                 } catch (IOException e) {
                     System.out.println("ERROR -> exec: " + e.getLocalizedMessage());
