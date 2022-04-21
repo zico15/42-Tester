@@ -173,7 +173,6 @@ public class FileBase {
                 projects.add(new ObjectCheck(check, Data.PROJECTS.get(i)));
             }
         }
-        //return (projects);
         return (organizeCheck(projects));
     }
 

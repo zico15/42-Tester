@@ -80,7 +80,8 @@ public class ExecuteController implements Initializable {
         if (dir.exists() && dir.isDirectory())
         {
 
-                FileBase.copyFile(file, dir);
+                if (!dir.exists())
+                    FileBase.copyFile(file, dir);
                 testers.forEach(t -> {
                     Terminal.exec(pro, "git", "clone", t.git);
                     System.out.println("V: "+t.qtdChecks);

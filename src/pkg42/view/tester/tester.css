@@ -26,7 +26,7 @@
     -fx-background-size: 30% 70%;
 }
 
-.butonGit
+.button-git
 {
     -fx-background-color:  #20B2AA;
     -fx-background-position: center;
@@ -36,6 +36,11 @@
     -fx-left: 100px;
     -fx-right: 100px;
     -fx-background-size: 30% 70%;
+}
+
+.button-git:hover
+{
+    -fx-background-color:  #008080;
 }
 
 .custom-dashed-border {
@@ -48,13 +53,4 @@
 
 }
 
-.custom-dashed-border:drop{
-    -fx-border-radius: 30;
-    -fx-border-color: #20B2AA;
-    -fx-border-width: 1 ;
-    -fx-background-radius: 30;
-     -fx-background-color:  #20B2AA;
-    -fx-background-size: 100% 100%;
-    -fx-border-style: segments(5, 5, 5, 5)  line-cap round;
 
-}

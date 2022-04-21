@@ -2,6 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Testers/-ft_printf-" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Testers/Get-Next-Line" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Testers/Get_next_line/clone" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Testers/Get_next_line/gnlTester" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Testers/clone" vcs="Git" />
