@@ -5,14 +5,12 @@
  */
 package pkg42.util.system;
 
+import com.jfoenix.controls.JFXDialog;
 import javafx.application.Platform;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.DialogPane;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -78,31 +76,43 @@ public class MensagemBox {
     }
 
     public static void creadDialogConsole(ObjectTest tester) {
+        Platform.runLater(() -> {
+            Alert dialog = new Alert(Alert.AlertType.INFORMATION);
+            dialog.setHeaderText(" Author: " + tester.author);
+            dialog.setResizable(true);
+            dialog.getDialogPane().setContent(tester.textArea);
+            dialog.setTitle("Tester: " + tester.name);
+            dialog.setOnCloseRequest(event -> {
+                ((Dialog) event.getSource()).hide();
+            });
+            dialog.show();
+        });
 
+       /* if (tester != null && tester.textArea != null){
+            Alert windows = new Alert(Alert.AlertType.NONE);
 
-
-        if (tester != null && tester.textArea != null){
-            Alert windows = new Alert(Alert.AlertType.WARNING);
             windows.setResizable(true);
             windows.setTitle(tester.name);
             windows.setOnCloseRequest(e->{
                 windows.close();
             });
            // windows.get
-            DialogPane d = windows.getDialogPane();
-            /*AnchorPane.setTopAnchor(tester.textArea, 0.0);
+           // DialogPane d = windows.getDialogPane();
+            AnchorPane.setTopAnchor(tester.textArea, 0.0);
             AnchorPane.setBottomAnchor(tester.textArea, 0.0);
             AnchorPane.setLeftAnchor(tester.textArea, 0.0);
-            AnchorPane.setRightAnchor(tester.textArea, 0.0);*/
-            d.setContent(tester.textArea);
+            AnchorPane.setRightAnchor(tester.textArea, 0.0);
+            //d.setContent(tester.textArea);
             //alert.getDialogPane().setExpandableContent(new ScrollPane(new TextArea(sw.toString())));
+            windows.getGraphic().getParent().getChildrenUnmodifiable().setAll(tester.textArea);
             windows.showAndWait();
+           // windows.close();
            /* Stage stage = new Stage();
             Scene scene = new Scene(tester.textArea, 400,600);
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.setScene(scene);
             stage.show();*/
-        }
+        //}
 
     }
     

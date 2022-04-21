@@ -44,6 +44,7 @@ public class ObjectTest implements Serializable {
     public ObjectTest()
     {
         type = "NULL";
+        textArea.setEditable(false);
     }
     
     public ObjectTest(JSONObject employeeObject){
@@ -71,6 +72,7 @@ public class ObjectTest implements Serializable {
 
         //Get employee website type
         type = (String) employeeObject.get("type");
+        textArea.setEditable(false);
     }
 
     public void updateTexts(String s) {
