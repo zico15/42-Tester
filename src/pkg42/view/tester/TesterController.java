@@ -64,7 +64,8 @@ public class TesterController implements Initializable {
             File dir =  FileBase.createFolder(Data.DIR_PROJECT + "/Testers");
             FileBase.deleteFolder(dir);
             if (e != null && e.getDragboard() != null && e.getDragboard().getFiles() != null && e.getDragboard().getFiles().size() > 0) {
-                executeProject(e.getDragboard().getFiles().get(0), new File(dir, e.getDragboard().getFiles().get(0).getName()));
+                FileBase.copyFile(e.getDragboard().getFiles().get(0), dir);
+                executeProject(e.getDragboard().getFiles().get(0), dir);
                 e.consume();
             }
 
@@ -72,28 +73,30 @@ public class TesterController implements Initializable {
 
     private void executeProject(File file_origem, File file_tester)
     {
-        File dir =  FileBase.createFolder(Data.DIR_PROJECT + "/Testers");
-        Data.PROJECT_SELECT = null;
-        if (file_origem != null && file_origem.exists()) {
-            ArrayList<ObjectCheck> checks = FileBase.checkProject(file_origem);
-            if (checks.size() > 0) {
-                ArrayList<ObjectTest> testers = FileBase.getTesters(checks.get(0).project);
-                //if(MensagemBox.showAlertOption(checks.get(0).project.name, "start tester (" + testers.size() + ")!")) {
-                    checks.get(0).project.testers = testers;
-                    checks.get(0).project.file_origem = file_origem;
-                    checks.get(0).project.file_tester = file_tester;
-                    Data.PROJECT_SELECT = checks.get(0).project;
-                    Run.setPane("execute/ExecuteView.fxml");
-               /* }
-                else*
-                    FileBase.deleteFolder(dir);*/
+        Platform.runLater(() -> {
+            File dir =  FileBase.createFolder(Data.DIR_PROJECT + "/Testers");
+            Data.PROJECT_SELECT = null;
+            if (file_origem != null && file_origem.exists()) {
+                ArrayList<ObjectCheck> checks = FileBase.checkProject(file_origem);
+                if (checks.size() > 0) {
+                    ArrayList<ObjectTest> testers = FileBase.getTesters(checks.get(0).project);
+                    if(MensagemBox.showAlertOption(checks.get(0).project.name, "start tester (" + testers.size() + ")!")) {
+                        checks.get(0).project.testers = testers;
+                        checks.get(0).project.file_origem = file_origem;
+                        checks.get(0).project.file_tester = file_tester;
+                        Data.PROJECT_SELECT = checks.get(0).project;
+                        Run.setPane("execute/ExecuteView.fxml");
+                    }
+                    else
+                        FileBase.deleteFolder(dir);
+                }
             }
-        }
+        });
     }
 
     @FXML
     void paste(ActionEvent event) {
-        Platform.runLater(() -> {
+       Platform.runLater(() -> {
             Clipboard cb = Clipboard.getSystemClipboard();
             if (!cb.hasString())
                 return;
@@ -101,21 +104,21 @@ public class TesterController implements Initializable {
             FileBase.deleteFolder(dir);
             Data.PROJECT_SELECT = null;
             String paste = cb.getString();
-            if (paste.contains("https://github.com"))
+            if (paste.contains("git"))
             {
-                String pasta = paste.substring(paste.lastIndexOf("/") + 1, paste.lastIndexOf(".git")).trim();
+                int end = paste.contains(".git") ? paste.lastIndexOf(".git") : paste.length();
+                String pasta = paste.substring(paste.lastIndexOf("/") + 1, end).trim();
                 System.out.println("git: " + pasta);
                 buttonGit1.setVisible(true);
                 new TerminalBase() {
                     @Override
                     public void finalize() throws Throwable {
-                        buttonGit1.setVisible(false);
-                        executeProject(new File(dir, pasta), new File(dir, pasta));
+                            buttonGit1.setVisible(false);
+                            executeProject(new File(dir, pasta), new File(dir, pasta));
                     }
                 }.exec(dir, "git", "clone", paste);
-
             }
-        });
+       });
     }
 
 

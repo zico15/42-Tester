@@ -69,14 +69,14 @@ public class FileBase {
 
                     if (f.isDirectory())
                     {
-                        System.out.println("Directory: " + t);
+                       // System.out.println("Directory: " + t);
                         copyFile(f, dest);
                     }
                     else if (f.isFile())
                     {
                         System.out.println("File: " + t);
 
-                            creadFile(f, t);
+                           creadFile(f, t);
 
                     }
                 }
@@ -88,16 +88,19 @@ public class FileBase {
 
     public static void creadFile(File sourceFile, File destFile) throws IOException {
 
-        if (!destFile.exists())
-            destFile.createNewFile();
-        FileChannel source = new FileInputStream(sourceFile).getChannel();;
-        FileChannel destination =  new FileOutputStream(destFile).getChannel();;
-        if (destination != null && source != null)
-            destination.transferFrom(source, 0, source.size());
-        if (source != null)
-            source.close();
-        if (destination != null)
-            destination.close();
+            if(!destFile.exists())
+            {
+                FileChannel source = new FileInputStream(sourceFile).getChannel();
+                ;
+                FileChannel destination = new FileOutputStream(destFile).getChannel();
+                ;
+                if (destination != null && source != null)
+                    destination.transferFrom(source, 0, source.size());
+                if (source != null)
+                    source.close();
+                if (destination != null)
+                    destination.close();
+         }
     }
 
     public static void saveData() {

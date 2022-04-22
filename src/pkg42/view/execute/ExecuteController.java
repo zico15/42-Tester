@@ -5,6 +5,7 @@
  */
 package pkg42.view.execute;
 
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -21,6 +22,7 @@ import pkg42.util.objects.ObjectTest;
 import pkg42.util.system.Data;
 import pkg42.util.system.FileBase;
 import pkg42.util.system.Terminal;
+import pkg42.util.system.TerminalBase;
 import pkg42.view.Run;
 import pkg42.view.execute.item.ItemController;
 
@@ -71,6 +73,18 @@ public class ExecuteController implements Initializable {
 
     }
 
+    public void executeTesters(File projectFile){
+        progess.setVisible(false);
+        list_view.setVisible(true);
+        data.forEach(e -> {
+            Thread run = new Thread() {
+                public void run() {
+                    e.initTester(projectFile);
+                }
+            };
+            run.start();
+        });
+    }
 
     public void initTester(File file, File dir, ObjectProject project, ArrayList<ObjectTest> testers)
     {
@@ -79,33 +93,21 @@ public class ExecuteController implements Initializable {
         File pro =  FileBase.createFolder(Data.DIR_PROJECT + "/Testers/"+file.getName());
         if (dir.exists() && dir.isDirectory())
         {
-
-                if (!dir.exists())
-                    FileBase.copyFile(file, dir);
                 testers.forEach(t -> {
-                    Terminal.exec(pro, "git", "clone", t.git);
-                    System.out.println("V: "+t.qtdChecks);
-                    data.add(getItem("item/ItemView.fxml" ,t));
-
+                    new TerminalBase(testers.size()) {
+                        @Override
+                        public void finalize() throws Throwable {
+                            Platform.runLater(() -> {
+                                System.out.println("progress: " + progress + " progressMax: " + progressMax);
+                                System.out.println("V: " + t.qtdChecks);
+                                data.add(getItem("item/ItemView.fxml", t));
+                                if (data.size() == testers.size())
+                                    executeTesters(pro);
+                            });
+                        }
+                    }.exec(pro, "git", "clone", t.git);
                 });
-                try {
-                    Thread.sleep(5 * 1000);
-                    System.out.println("sleep: ok");
-                } catch (InterruptedException ie) {
-                    Thread.currentThread().interrupt();
-                }
         }
-        progess.setVisible(false);
-        list_view.setVisible(true);
-        data.forEach(e -> {
-            Thread run = new Thread() {
-                public void run() {
-                    e.initTester(pro);
-                }
-            };
-            run.start();
-        });
-
     }
 
     private ItemController getItem(String pane, ObjectTest terter){

@@ -9,6 +9,19 @@ public abstract class TerminalBase {
 
     public abstract void  finalize() throws Throwable;
 
+    public int progressMax;
+    public int progress;
+
+    public TerminalBase()
+    {
+
+    }
+
+    public TerminalBase(int progressMax)
+    {
+        this.progress = 0;
+        this.progressMax = progressMax;
+    }
 
     private static void editMake(File patch)
     {
@@ -53,7 +66,7 @@ public abstract class TerminalBase {
             line = buffer.readLine();
             //Platform.runLater(() -> {
             //});
-            System.out.println(line);
+          //  System.out.println(line);
             //
         } catch (IOException e) {
             e.printStackTrace();
@@ -80,6 +93,7 @@ public abstract class TerminalBase {
                     }
                     proc.waitFor();
                     proc.destroy();
+                    progress++;
                     finalize();
                 } catch (IOException e) {
                     System.out.println("ERROR -> exec: " + e.getLocalizedMessage());
