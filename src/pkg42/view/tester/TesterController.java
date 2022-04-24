@@ -78,7 +78,7 @@ public class TesterController implements Initializable {
             Data.PROJECT_SELECT = null;
             if (file_origem != null && file_origem.exists()) {
                 ArrayList<ObjectCheck> checks = FileBase.checkProject(file_origem);
-                if (checks.size() > 0) {
+                if (checks.size() > 0 || MensagemBox.showOption(checks)) {
                     ArrayList<ObjectTest> testers = FileBase.getTesters(checks.get(0).project);
                     if(MensagemBox.showAlertOption(checks.get(0).project.name, "start tester (" + testers.size() + ")!")) {
                         checks.get(0).project.testers = testers;

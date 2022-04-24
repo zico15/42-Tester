@@ -40,6 +40,7 @@ public class Run extends Application {
             Platform.exit();
         });
         Scene scene = new Scene(root, 350, 350);
+        primaryStage.setResizable(false);
         primaryStage.setTitle("42 Tester - C");
         primaryStage.setScene(scene);
         primaryStage.show();

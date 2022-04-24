@@ -58,3 +58,19 @@
     -fx-border-style: segments(5, 5, 5, 5)  line-cap round;
 
 }
+
+.butonHome
+{
+    -fx-background-image: url("home.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 30% 70%;
+}
+
+.butonGit2
+{
+    -fx-background-image: url("git.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 30% 70%;
+}

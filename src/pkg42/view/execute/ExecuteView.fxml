@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -16,12 +17,14 @@
         <URL value="@../execute/execute.css" />
     </stylesheets>
    <children>
-      <ListView fx:id="list_view" layoutX="63.0" layoutY="75.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <ProgressIndicator fx:id="progess" visible="false" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0" />
-      <BorderPane layoutX="124.0" layoutY="271.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-         <center>
-            <Button mnemonicParsing="false" onAction="#home" text="HOME" BorderPane.alignment="CENTER" />
-         </center>
-      </BorderPane>
+      <ListView fx:id="list_view" focusTraversable="false" layoutX="63.0" layoutY="75.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <ProgressIndicator fx:id="progess" focusTraversable="false" visible="false" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="40.0" />
+      <HBox maxHeight="40.0" minHeight="40.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label focusTraversable="false" minHeight="40.0" minWidth="70.0" onMouseClicked="#home" styleClass="butonHome" />
+            <Label focusTraversable="false" minHeight="40.0" minWidth="70.0" onDragDetected="#home" styleClass="butonGit2" />
+         </children>
+      </HBox>
+      <Separator layoutX="44.0" layoutY="359.0" minHeight="1.0" prefWidth="200.0" style="-fx-background-color: #20B2AA;" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
    </children>
 </AnchorPane>

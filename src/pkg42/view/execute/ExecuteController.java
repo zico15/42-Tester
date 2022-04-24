@@ -105,7 +105,7 @@ public class ExecuteController implements Initializable {
                                     executeTesters(pro);
                             });
                         }
-                    }.exec(pro, "git", "clone", t.git);
+                    }.exec(pro, "git", "clone", t.git, t.name);
                 });
         }
     }

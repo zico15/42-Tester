@@ -1,22 +1,18 @@
 {
   "projects": [
     {
-      "name": "teste",
-      "files": [
-        "file1.c",
-        "file2.c",
-        "file3.h"
-      ]
-    },
-    {
-      "name": "get next teste",
+      "name": "get_next_line",
       "files": [
         "get_next_line.c",
-        "get_next_line_utils.c"
+        "get_next_line_utils.c",
+        "get_next_line.h",
+        "get_next_line_bonus.c",
+        "get_next_line_utils_bonus.c",
+        "get_next_line_bonus.h"
       ]
     },
     {
-      "name": "get_next_line",
+      "name": "ft_printf",
       "files": [
         "get_next_line.c",
         "get_next_line_utils.c",
@@ -47,6 +43,27 @@
       "KeywordFail": "KO",
       "KeywordSuccess": "OK",
       "type": "get_next_line"
+    },
+    {
+      "cmdStart": null,
+      "git": "https://github.com/Tripouille/printfTester",
+      "author": "Tripouille",
+      "name": "printfTester",
+      "qtdChecks": 38,
+      "KeywordFail": "KO",
+      "KeywordSuccess": "OK",
+      "type": "ft_printf"
+    },
+    {
+      "cmdStart": null,
+      "git": "https://github.com/qbornet/printfTester",
+      "author": "qbornet",
+      "name": "printfTester2",
+      "qtdChecks": 38,
+      "KeywordFail": "KO",
+      "KeywordSuccess": "OK",
+      "type": "ft_printf"
     }
   ]
 }
+
